@@ -14,6 +14,7 @@ export class ListaComponent {
   @Output() employeeListChange = new EventEmitter<any[]>(); // Evento para comunicar mudanças na lista
   showList = false; // Controle para exibir/ocultar a lista
   novoPaciente: any = {}; // Objeto para um novo paciente
+  searchTerm: string = ''; // Propriedade para armazenar o termo de pesquisa
 
   // Método para iniciar a edição do paciente
   editPaciente(paciente: any) {
@@ -62,5 +63,18 @@ export class ListaComponent {
   // Método para exibir ou ocultar a lista
   toggleList() {
     this.showList = !this.showList; // Alterna a visibilidade da lista
+  }
+
+  // Método para filtrar a lista de funcionários
+  filteredEmployeeList() {
+    return this.employeeList.filter(item => {
+      const lowerTerm = this.searchTerm.toLowerCase();
+      return (
+        item.codigoPin.toLowerCase().includes(lowerTerm) ||
+        item.nome.toLowerCase().includes(lowerTerm) ||
+        item.celular.toLowerCase().includes(lowerTerm) ||
+        item.email.toLowerCase().includes(lowerTerm)
+      );
+    });
   }
 }

@@ -4,9 +4,15 @@
   </button>
 
   <div *ngIf="showList" class="lista-content">
-    <div class="card-header"></div>
-    <div>
-    <h6>Lista de Pacientes</h6>
+    <div class="card-header">
+      <h6>Lista de Pacientes</h6>
+      <!-- Campo de pesquisa -->
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Pesquisar paciente"
+        class="form-control"
+      />
     </div>
     <div class="card-body">
       <div class="row">
@@ -14,15 +20,15 @@
           <table class="table">
             <thead>
               <tr>
-                <th>PIN</th>
+                <th>Código PIN</th>
                 <th>Nome</th>
                 <th>Contato</th>
-                <th>E-mail</th>
+                <th>Email</th>
                 <th>Ações</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of employeeList; let i = index" [attr.key]="item.codigoPin">
+              <tr *ngFor="let item of filteredEmployeeList()">
                 <td>{{ item.codigoPin }}</td>
                 <td>
                   <div *ngIf="!item.isEditing" class="bold-text">{{ item.nome }}</div>
@@ -37,14 +43,15 @@
                   <input *ngIf="item.isEditing" [(ngModel)]="item.email" />
                 </td>
                 <td>
-                  <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent" aria-label="Editar paciente">
+                  <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent me-2" aria-label="Editar paciente">
                     <span class="material-icons">edit</span>
                   </button>
-                  <button *ngIf="item.isEditing" (click)="saveEdit(item)" class="btn btn-success" aria-label="Salvar alterações">Salvar</button>
-                  <button *ngIf="item.isEditing" (click)="cancelEdit(item)" class="btn btn-secondary" aria-label="Cancelar edição">Cancelar</button>
+                  <button *ngIf="item.isEditing" (click)="saveEdit(item)" class="btn btn-success me-2" aria-label="Salvar alterações">Salvar</button>
+                  <button *ngIf="item.isEditing" (click)="cancelEdit(item)" class="btn btn-secondary me-2" aria-label="Cancelar edição">Cancelar</button>
                   <button (click)="deletePaciente(item.codigoPin)" class="btn btn-transparent" aria-label="Excluir paciente">
                     <span class="material-icons">delete</span>
                   </button>
+
                 </td>
               </tr>
             </tbody>
