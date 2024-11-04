@@ -1,0 +1,106 @@
+.lista-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative; /* Define a posição relativa para os filhos absolutos se posicionarem corretamente */
+}
+
+.btn-info {
+  background-color: #40645c;
+  border-color: #40645c;
+  color: #fff;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn-info:hover {
+  background-color: #36584e;
+  border-color: #36584e;
+}
+
+.lista-content {
+  position: fixed; /* Usa fixed para fixar no canto superior direito */
+  top: 70px; /* Ajuste este valor de acordo com a altura do seu cabeçalho */
+  right: 20px; /* Espaço à direita */
+  width: 34%; /* Largura da lista */
+  max-width: 100%; /* Não ultrapassa a largura da tela */
+  z-index: 1000; /* Mantém acima de outros elementos */
+  overflow: auto; /* Adiciona rolagem se o conteúdo for maior que a altura */
+  max-height: calc(100vh - 80px); /* Para evitar que a lista ultrapasse a tela */
+  margin-top: 0.5%; /* Adiciona uma margem superior de 1% */
+}
+
+.card-header {
+  background-color: #40645c; /* Força a cor de fundo */
+  color: white; /* Força a cor do texto para branco */
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  margin: 0;
+  border-collapse: collapse; /* Remove as bordas entre as colunas */
+  width: 100%; /* Certifica-se que a tabela ocupa toda a largura disponível */
+}
+
+.table th {
+  background-color: white; /* Cor de fundo do cabeçalho */
+  color: #40645c; /* Cor do texto no cabeçalho */
+  text-align: left; /* Alinhamento à esquerda */
+  padding: 10px; /* Espaçamento interno das células do cabeçalho */
+}
+
+.table td {
+  text-align: left; /* Alinha o texto à esquerda */
+  padding: 8px; /* Espaçamento interno das células */
+  border: none; /* Remove as bordas das células */
+}
+
+/* Define a cor de fundo para todas as linhas da tabela */
+.table tbody tr {
+  background-color: black !important;/* Cor de fundo cinza claro */
+}
+
+.table tbody tr:hover {
+  background-color: #c0c0c0; /* Cor de fundo cinza mais escuro ao passar o mouse */
+}
+
+.bold-text {
+  font-weight: bold; /* Aplica negrito ao texto */
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.btn-transparent {
+  background-color: transparent !important; /* Remove a cor de fundo */
+  border: none !important; /* Remove a borda */
+  color: gray !important; /* Define a cor do texto como cinza */
+  cursor: pointer; /* Adiciona o cursor de ponteiro ao passar o mouse */
+  padding: 0; /* Remove o padding para evitar espaço extra */
+}
+
+.btn-transparent:hover {
+  color: black !important; /* Muda a cor do texto para preto ao passar o mouse */
+}
+
+.icon {
+  font-size: 20px; /* Tamanho do ícone */
+  color: gray; /* Cor do ícone */
+}

@@ -16,24 +16,27 @@ export class TabelaComponent {
 
   constructor() {
     this.employeeForm = new FormGroup({
-      nome: new FormControl(''),
-      email: new FormControl(''),
-      celular: new FormControl(''),
-      cidade: new FormControl(''),
-      estado: new FormControl(''),
-      codigoPin: new FormControl(''),
-      cpf: new FormControl(''),
-      endereco: new FormControl(''),
+      nome: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      email: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      celular: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      cidade: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      estado: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      codigoPin: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      cpf: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      endereco: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
     });
   }
 
   onSave() {
+    console.log('Formulário salvo:', this.employeeForm.value); // Log dos dados do formulário
     if (this.employeeForm.valid) {
-      // Emite os dados do paciente
       const pacienteData = this.employeeForm.value; // Obtém os dados do formulário
       this.pacienteCadastrado.emit(pacienteData); // Emite os dados do paciente
       this.employeeForm.reset(); // Reseta o formulário após o envio
+    } else {
+      console.error('Formulário inválido!', this.employeeForm.errors);
     }
   }
 }
+
 

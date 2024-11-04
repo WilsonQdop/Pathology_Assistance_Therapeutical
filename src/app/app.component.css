@@ -1,3 +1,21 @@
 form-control {
     border: 1px solid gray !important;
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+app-header {
+  height: 60px; /* Ajuste conforme necessário */
+  background-color: #f8f9fa; /* Cor de fundo do header */
+  z-index: 10;
+  position: relative; /* Garante que o header fique no fluxo normal do documento */
+}
+
+app-tabela {
+  margin-top: 1%; /* Espaço entre o header e a tabela */
+  position: relative; /* Não sobrepõe o header */
+  z-index: 1; /* Z-index mais baixo que o header */
+}

@@ -4,27 +4,28 @@
   </button>
 
   <div *ngIf="showList" class="lista-content">
-    <div class="card-header bg-success">
-      <h6>Lista de Pacientes</h6>
+    <div class="card-header"></div>
+    <div>
+    <h6>Lista de Pacientes</h6>
     </div>
     <div class="card-body">
       <div class="row">
         <div class="col-12">
-          <table class="table table-bordered">
+          <table class="table">
             <thead>
               <tr>
-                <th>Código PIN</th>
+                <th>PIN</th>
                 <th>Nome</th>
                 <th>Contato</th>
-                <th>Email</th>
-                <th>Ações</th> <!-- Nova coluna para ações -->
+                <th>E-mail</th>
+                <th>Ações</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of employeeList">
+              <tr *ngFor="let item of employeeList; let i = index" [attr.key]="item.codigoPin">
                 <td>{{ item.codigoPin }}</td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{ item.nome }}</div>
+                  <div *ngIf="!item.isEditing" class="bold-text">{{ item.nome }}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.nome" />
                 </td>
                 <td>
@@ -36,10 +37,14 @@
                   <input *ngIf="item.isEditing" [(ngModel)]="item.email" />
                 </td>
                 <td>
-                  <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-primary">Editar</button>
-                  <button *ngIf="item.isEditing" (click)="saveEdit(item)" class="btn btn-success">Salvar</button>
-                  <button *ngIf="item.isEditing" (click)="cancelEdit(item)" class="btn btn-secondary">Cancelar</button>
-                  <button (click)="deletePaciente(item.codigoPin)" class="btn btn-danger">Deletar</button>
+                  <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent" aria-label="Editar paciente">
+                    <span class="material-icons">edit</span>
+                  </button>
+                  <button *ngIf="item.isEditing" (click)="saveEdit(item)" class="btn btn-success" aria-label="Salvar alterações">Salvar</button>
+                  <button *ngIf="item.isEditing" (click)="cancelEdit(item)" class="btn btn-secondary" aria-label="Cancelar edição">Cancelar</button>
+                  <button (click)="deletePaciente(item.codigoPin)" class="btn btn-transparent" aria-label="Excluir paciente">
+                    <span class="material-icons">delete</span>
+                  </button>
                 </td>
               </tr>
             </tbody>

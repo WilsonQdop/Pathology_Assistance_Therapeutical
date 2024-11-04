@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class ListaComponent {
   @Input() employeeList: any[] = []; // Recebe a lista de pacientes
+  @Output() employeeListChange = new EventEmitter<any[]>(); // Evento para comunicar mudanças na lista
   showList = false; // Controle para exibir/ocultar a lista
+  novoPaciente: any = {}; // Objeto para um novo paciente
 
   // Método para iniciar a edição do paciente
   editPaciente(paciente: any) {
@@ -30,7 +32,31 @@ export class ListaComponent {
 
   // Método para deletar paciente
   deletePaciente(codigoPin: any) {
-    this.employeeList = this.employeeList.filter(p => p.codigoPin !== codigoPin); // Remove o paciente da lista
+    this.employeeList = this.employeeList.filter(p => p.codigoPin !== codigoPin);
+    this.employeeListChange.emit(this.employeeList);
+  }
+
+  // Método para adicionar um novo paciente
+  addPaciente() {
+    // Verifica se o novo paciente possui Código PIN e Nome
+    if (!this.novoPaciente.codigoPin || !this.novoPaciente.nome) {
+      console.error('Código PIN e Nome são obrigatórios!');
+      return; // Não adiciona se os campos obrigatórios não estiverem preenchidos
+    }
+
+    // Verifica se o Código PIN já existe
+    const codigoPinExistente = this.employeeList.some(p => p.codigoPin === this.novoPaciente.codigoPin);
+    if (codigoPinExistente) {
+      console.error('Código PIN já existente!');
+      return; // Não adiciona se o Código PIN já existir
+    }
+
+    // Adiciona o novo paciente à lista
+    this.employeeList.push({ ...this.novoPaciente });
+    this.employeeListChange.emit(this.employeeList); // Emite a nova lista
+
+    // Reseta o objeto do novo paciente
+    this.novoPaciente = {};
   }
 
   // Método para exibir ou ocultar a lista
