@@ -1,0 +1,44 @@
+.image {
+  position: fixed; /* Fixa a posição em relação à viewport */
+  bottom: 80px; /* Distância do fundo para ficar acima do footer */
+  right: 20px; /* Distância da direita */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center; /* Centraliza o texto e a imagem */
+}
+
+.image img {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção */
+  display: block; /* Garante que a imagem seja tratada como um bloco */
+  margin: 0 auto; /* Centraliza a imagem dentro do contêiner */
+}
+
+.message-bar {
+  display: flex; /* Usar flexbox para alinhar os itens */
+  margin-top: 10px; /* Espaçamento acima da barra de mensagens */
+  justify-content: center; /* Centraliza a barra de mensagens */
+}
+
+.message-bar input {
+  padding: 5px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda da caixa de entrada */
+  border-radius: 4px; /* Cantos arredondados */
+  flex: 1; /* Faz a caixa de entrada ocupar o máximo de espaço */
+  margin-right: 10px; /* Espaçamento à direita da caixa de entrada */
+}
+
+.message-bar button {
+  padding: 6px 12px; /* Espaçamento interno do botão */
+  background-color: #40645c; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+.message-bar button:hover {
+  background-color: gray; /* Cor do botão ao passar o mouse */
+}
