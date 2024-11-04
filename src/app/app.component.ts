@@ -3,12 +3,13 @@ import { HeaderComponent } from './header/header.component';
 import { ListaComponent } from './lista/lista.component';
 import { FooterComponent } from './footer/footer.component';
 import { TabelaComponent } from './tabela/tabela.component';
+import { HipocratesComponent } from './hipocrates/hipocrates.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, TabelaComponent, ListaComponent, FooterComponent,],
+  imports: [HeaderComponent, TabelaComponent, ListaComponent, FooterComponent,HipocratesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

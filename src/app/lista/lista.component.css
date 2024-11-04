@@ -97,7 +97,7 @@
 }
 
 .btn-transparent:hover {
-  color: black !important; /* Muda a cor do texto para preto ao passar o mouse */
+  color: #40645c !important; /* Muda a cor do texto para preto ao passar o mouse */
 }
 
 .icon {

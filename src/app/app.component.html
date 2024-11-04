@@ -1,12 +1,7 @@
 <div class="app-container">
   <app-header></app-header>
-
-  <!-- Formulário de cadastro no TabelaComponent -->
   <app-tabela (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
-
-  <!-- Lista de pacientes no ListaComponent -->
   <app-lista [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
-  
+  <app-hipocrates></app-hipocrates> <!-- Componente Hipocrates -->
   <app-footer></app-footer>
-
 </div>

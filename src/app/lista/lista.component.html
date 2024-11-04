@@ -44,12 +44,12 @@
                 </td>
                 <td>
                   <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent me-2" aria-label="Editar paciente">
-                    <span class="material-icons">edit</span>
+                    <span class="material-icons">edit</span>Editar
                   </button>
                   <button *ngIf="item.isEditing" (click)="saveEdit(item)" class="btn btn-success me-2" aria-label="Salvar alterações">Salvar</button>
                   <button *ngIf="item.isEditing" (click)="cancelEdit(item)" class="btn btn-secondary me-2" aria-label="Cancelar edição">Cancelar</button>
                   <button (click)="deletePaciente(item.codigoPin)" class="btn btn-transparent" aria-label="Excluir paciente">
-                    <span class="material-icons">delete</span>
+                    <span class="material-icons">delete</span>Excluir
                   </button>
 
                 </td>

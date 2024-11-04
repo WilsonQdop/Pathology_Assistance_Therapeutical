@@ -1,6 +1,7 @@
-form-control {
-    border: 1px solid gray !important;
+.form-control {
+  border: 1px solid gray !important;
 }
+
 .app-container {
   display: flex;
   flex-direction: column;
