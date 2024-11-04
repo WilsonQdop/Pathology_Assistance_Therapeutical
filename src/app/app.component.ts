@@ -9,7 +9,7 @@ import { HipocratesComponent } from './hipocrates/hipocrates.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, TabelaComponent, ListaComponent, FooterComponent,HipocratesComponent],
+  imports: [HeaderComponent, TabelaComponent, ListaComponent, FooterComponent,HipocratesComponent,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

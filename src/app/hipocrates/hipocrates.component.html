@@ -1,8 +1,23 @@
 <div class="image">
   <h6>Converse com Hipócrates</h6>
   <img src="image-hipocrates.png" alt="Hipócrates">
+
+  <!-- Área para exibir mensagens e áudios -->
+  <div class="messages">
+    <div *ngFor="let mensagem of mensagens" class="message">
+      <div *ngIf="mensagem.texto">{{ mensagem.texto }}</div>
+      <audio *ngIf="mensagem.audioUrl" controls>
+        <source [src]="mensagem.audioUrl" type="audio/webm">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+    </div>
+  </div>
+
   <div class="message-bar">
     <input type="text" [(ngModel)]="mensagem" placeholder="Digite sua mensagem..." />
     <button (click)="enviarMensagem()">Enviar</button>
+    <button (click)="gravando ? pararGravacao() : iniciarGravacao()">
+      <mat-icon>{{ gravando ? 'stop' : 'mic' }}</mat-icon>
+    </button>
   </div>
 </div>
