@@ -13,6 +13,7 @@ export class TabelaComponent {
   @Output() pacienteCadastrado = new EventEmitter<any>(); // Emissor de evento
 
   employeeForm: FormGroup;
+  ordemAtual = 1;
 
   constructor() {
     this.employeeForm = new FormGroup({
@@ -24,6 +25,7 @@ export class TabelaComponent {
       codigoPin: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
       cpf: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
       endereco: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      ordem: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
     });
   }
 
@@ -32,6 +34,7 @@ export class TabelaComponent {
     if (this.employeeForm.valid) {
       const pacienteData = this.employeeForm.value; // Obtém os dados do formulário
       this.pacienteCadastrado.emit(pacienteData); // Emite os dados do paciente
+      this.ordemAtual++;
       this.employeeForm.reset(); // Reseta o formulário após o envio
     } else {
       console.error('Formulário inválido!', this.employeeForm.errors);

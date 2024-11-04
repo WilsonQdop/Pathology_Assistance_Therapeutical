@@ -41,6 +41,7 @@
   font-weight: bold;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+ 
 }
 
 .card-body {
@@ -54,6 +55,7 @@
   margin: 0;
   border-collapse: collapse; /* Remove as bordas entre as colunas */
   width: 100%; /* Certifica-se que a tabela ocupa toda a largura disponível */
+  overflow-x: auto;
 }
 
 .table th {
@@ -61,12 +63,14 @@
   color: #40645c; /* Cor do texto no cabeçalho */
   text-align: left; /* Alinhamento à esquerda */
   padding: 10px; /* Espaçamento interno das células do cabeçalho */
+  white-space: nowrap; 
 }
 
 .table td {
   text-align: left; /* Alinha o texto à esquerda */
   padding: 8px; /* Espaçamento interno das células */
   border: none; /* Remove as bordas das células */
+  white-space: nowrap; 
 }
 
 /* Define a cor de fundo para todas as linhas da tabela */
@@ -104,5 +108,45 @@
   font-size: 20px; /* Tamanho do ícone */
   color: gray; /* Cor do ícone */
 
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.icons-color2 {
+  color: red;
+}
+.icons-color1 {
+  color: rgb(17, 112, 17);
+}
+
+@media (max-width: 480px) {
+  .table th, .table td {
+    font-size: 12px; /* Fonte menor para caber em telas de smartphones */
+  }
+  .circle {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+  .btn-info {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .card-header h6 {
+    font-size: 16px;
+    width: 100vh;
+  }
 }
 
