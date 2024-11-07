@@ -1,8 +1,12 @@
-# Angular18Crud
+# PAT - Pathology Assistance Therapeutical
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 18.2.6.
 
-## Development server
+## Objetivo
+
+Nossso objetivo é produzir um crud de cadastro de pacientes de cadastro de pacientes.
+
+## Descrição do projeto
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
