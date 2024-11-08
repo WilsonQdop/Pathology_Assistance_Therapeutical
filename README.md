@@ -3,6 +3,9 @@
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 18.2.6.
 
 ## Objetivo
+Elaborar um CRUD funcional.
+
+## Descrição do projeto
 
 O projeto consiste em criar uma aplicação web que auxilie profissionais de saúde, seja na organização ou controle de informações do seu paciente,
 com esse desafio, idealizamos o PAT (Pathology Assistance Therapeutical) que tem o objetivo de ajudar, unir e solucionar os desafios impostos.
@@ -18,11 +21,6 @@ O PAT encurtará as barreiras entre profissionais de saúde, dando a oportunidad
 Com a ajuda da nossa IA Hipócrates(O pai da Medicina e nosso assistente virtual), será possível gerar análises de quadros clínicos, diagnósticos de pacientes
 e ainda indicar especialistas que possam dar suporte na ocasião.
 
-	
-
-## Descrição do projeto
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
