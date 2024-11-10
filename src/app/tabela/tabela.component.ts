@@ -14,7 +14,7 @@ export class TabelaComponent {
 
   employeeForm: FormGroup;
   ordemAtual = 1;
-  formVisible = false; // Variável que controla a visibilidade do formulário
+  formVisible = true; // Variável que controla a visibilidade do formulário
 
   constructor() {
     this.employeeForm = new FormGroup({
