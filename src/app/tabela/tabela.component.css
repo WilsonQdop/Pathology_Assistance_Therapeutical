@@ -66,4 +66,19 @@ input, textarea {
   margin-top: 20px;
 }
 
+.custom-button {
+  width: 28%; /* Ajuste a largura conforme necessário */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #265468; /* Cor primária do botão */
+  border-color: #265468; /* Cor da borda */
+  font-size: 1.0rem;
+}
+
+.custom-button:hover {
+  background-color: #5f8f9c; /* Cor ao passar o mouse */
+  border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
+}
+
 

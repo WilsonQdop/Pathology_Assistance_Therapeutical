@@ -7,8 +7,8 @@
 }
 
 .btn-info {
-  background-color: #40645c;
-  border-color: #40645c;
+  background-color: #265468;
+  border-color: #265468;
   color: #fff;
   margin-bottom: 15px;
   padding: 10px 20px;
@@ -17,31 +17,30 @@
 }
 
 .btn-info:hover {
-  background-color: #36584e;
-  border-color: #36584e;
+  background-color: #5f8f9c;
+  border-color: #5f8f9c;
 }
 
 .lista-content {
-  position: fixed; /* Usa fixed para fixar no canto superior direito */
-  top: 70px; /* Ajuste este valor de acordo com a altura do seu cabeçalho */
-  right: 20px; /* Espaço à direita */
-  width: 34%; /* Largura da lista */
-  max-width: 100%; /* Não ultrapassa a largura da tela */
-  z-index: 1000; /* Mantém acima de outros elementos */
-  overflow: auto; /* Adiciona rolagem se o conteúdo for maior que a altura */
-  max-height: calc(100vh - 80px); /* Para evitar que a lista ultrapasse a tela */
-  margin-top: 0.5%; /* Adiciona uma margem superior de 1% */
+  position: fixed;
+  top: 70px; /* Ajuste conforme a altura do cabeçalho */
+  right: 20px;
+  width: 34%;
+  max-width: 100%;
+  z-index: 1000;
+  overflow: auto;
+  max-height: calc(100vh - 80px);
+  margin-top: 0.5%;
 }
 
 .card-header {
-  background-color: #40645c; /* Força a cor de fundo */
-  color: white; /* Força a cor do texto para branco */
+  background-color: #265468;
+  color: white;
   text-align: center;
   padding: 10px;
   font-weight: bold;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
- 
 }
 
 .card-body {
@@ -49,41 +48,43 @@
   padding: 15px;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Define a largura fixa */
+    height: 400px; /* Define a altura fixa */
+    overflow-y: auto; /* Adiciona barra de rolagem para o conteúdo interno */
 }
 
 .table {
   margin: 0;
-  border-collapse: collapse; /* Remove as bordas entre as colunas */
-  width: 100%; /* Certifica-se que a tabela ocupa toda a largura disponível */
+  border-collapse: collapse;
+  width: 100%;
   overflow-x: auto;
 }
 
 .table th {
-  background-color: white; /* Cor de fundo do cabeçalho */
-  color: #40645c; /* Cor do texto no cabeçalho */
-  text-align: left; /* Alinhamento à esquerda */
-  padding: 10px; /* Espaçamento interno das células do cabeçalho */
-  white-space: nowrap; 
+  background-color: white;
+  color: #265468;
+  text-align: left;
+  padding: 10px;
+  white-space: nowrap;
 }
 
 .table td {
-  text-align: left; /* Alinha o texto à esquerda */
-  padding: 8px; /* Espaçamento interno das células */
-  border: none; /* Remove as bordas das células */
-  white-space: nowrap; 
+  text-align: left;
+  padding: 8px;
+  border: none;
+  white-space: nowrap;
 }
 
-/* Define a cor de fundo para todas as linhas da tabela */
 .table tbody tr {
-  background-color: black !important;/* Cor de fundo cinza claro */
+  background-color: black !important;
 }
 
 .table tbody tr:hover {
-  background-color: #c0c0c0; /* Cor de fundo cinza mais escuro ao passar o mouse */
+  background-color: #c0c0c0;
 }
 
 .bold-text {
-  font-weight: bold; /* Aplica negrito ao texto */
+  font-weight: bold;
 }
 
 .btn {
@@ -93,47 +94,49 @@
 }
 
 .btn-transparent {
-  background-color: transparent !important; /* Remove a cor de fundo */
-  border: none !important; /* Remove a borda */
-  color: gray !important; /* Define a cor do texto como cinza */
-  cursor: pointer; /* Adiciona o cursor de ponteiro ao passar o mouse */
-  padding: 0; /* Remove o padding para evitar espaço extra */
+  background-color: transparent !important;
+  border: none !important;
+  color: gray !important;
+  cursor: pointer;
+  padding: 0;
 }
 
 .btn-transparent:hover {
-  color: #40645c !important; /* Muda a cor do texto para preto ao passar o mouse */
+  color: #265468 !important;
 }
 
 .icon {
-  font-size: 20px; /* Tamanho do ícone */
-  color: gray; /* Cor do ícone */
-
+  font-size: 20px;
+  color: gray;
 }
+
 .circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #f0f0f0;
   text-align: center;
-  line-height: 30px;
+  line-height: 20px;
   font-weight: bold;
 }
 
 .icons {
   display: flex;
-  text-align: center;
   align-items: center;
+  text-align: center;
 }
+
 .icons-color2 {
   color: red;
 }
+
 .icons-color1 {
-  color: rgb(17, 112, 17);
+  color: #265468;
 }
 
 @media (max-width: 480px) {
   .table th, .table td {
-    font-size: 12px; /* Fonte menor para caber em telas de smartphones */
+    font-size: 12px;
   }
   .circle {
     width: 25px;
@@ -146,7 +149,10 @@
   }
   .card-header h6 {
     font-size: 16px;
-    width: 100vh;
+  }
+  .lista-content {
+    width: 90%; /* Ajusta a largura para telas menores */
+    left: 5%; /* Centraliza na tela */
   }
 }
 

@@ -14,6 +14,7 @@ export class TabelaComponent {
 
   employeeForm: FormGroup;
   ordemAtual = 1;
+  formVisible = false; // Variável que controla a visibilidade do formulário
 
   constructor() {
     this.employeeForm = new FormGroup({
@@ -29,6 +30,10 @@ export class TabelaComponent {
     });
   }
 
+  toggleForm() {
+    this.formVisible = !this.formVisible; // Alterna a visibilidade do formulário
+  }
+
   onSave() {
     console.log('Formulário salvo:', this.employeeForm.value); // Log dos dados do formulário
     if (this.employeeForm.valid) {
@@ -41,5 +46,3 @@ export class TabelaComponent {
     }
   }
 }
-
-
