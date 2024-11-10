@@ -21,8 +21,4 @@ app-tabela {
   z-index: 1; /* Z-index mais baixo que o header */
 }
 
-:root {
-  --cor-primaria: #265468;
-  --cor-secundaria: #5f8f9c;
-  --cor-erro: red;
-}
+

@@ -2,6 +2,8 @@
   <app-header></app-header>
   <app-tabela (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
   <app-lista [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
-  <app-hipocrates></app-hipocrates> <!-- Componente Hipocrates -->
+  <app-hipocrates></app-hipocrates>
+
+  <!-- O rodapé deve ser posicionado de forma flexível no final -->
   <app-footer></app-footer>
 </div>

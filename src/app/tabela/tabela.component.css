@@ -80,3 +80,12 @@ input, textarea {
   background-color: #5f8f9c; /* Cor ao passar o mouse */
   border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
 }
+
+.btn-success{
+  background-color: #265468; /* Cor ao passar o mouse */
+  border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
+}
+.btn-success:hover{
+  background-color: #5f8f9c; /* Cor ao passar o mouse */
+  border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
+}
