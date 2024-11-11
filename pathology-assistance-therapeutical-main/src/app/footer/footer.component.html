@@ -1,0 +1,17 @@
+<footer class="footer">
+  <button class="footer-button" (click)="toggleExpand()" [attr.aria-expanded]="isExpanded">
+    <div class="footer-content">
+      <p>&copy; 2024 - PAT - Pathology Assistance Therapeutical. Todos os direitos reservados.</p>
+    </div>
+
+    <!-- Conteúdo adicional que só aparece ao expandir -->
+    <div class="footer-expandable-content" [class.expanded]="isExpanded">
+      <p>Autores:</p>
+      <ul>
+        <li>Gustavo, Jotta, Vinícius Souza P.S.Sobral, Wilson</li>
+        <li>Política de Privacidade</li>
+
+      </ul>
+    </div>
+  </button>
+</footer>

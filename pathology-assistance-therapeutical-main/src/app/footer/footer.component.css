@@ -1,0 +1,45 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-button {
+  background-color: #B0B0B0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+/* Conteúdo adicional que expande */
+.footer-expandable-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+
+/* Quando expandido, a altura aumenta para mostrar o conteúdo */
+.footer-expandable-content.expanded {
+  height: auto;
+  padding: 10px 0;
+}
+
+.footer-expandable-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-expandable-content li {
+  margin: 5px 0;
+}
