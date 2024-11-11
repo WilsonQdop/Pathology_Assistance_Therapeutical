@@ -11,6 +11,7 @@
   max-width: 90%; /* Largura máxima para telas menores */
   transition: all 0.3s ease; /* Transição suave ao minimizar/maximizar */
   overflow: hidden; /* Garante que o conteúdo desapareça ao minimizar */
+  
 }
 
 .minimize-btn {
