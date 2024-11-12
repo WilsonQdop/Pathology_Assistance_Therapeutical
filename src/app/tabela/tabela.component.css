@@ -33,7 +33,7 @@
 }
 
 form {
-  width: 48%; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
+  width: 70dvh; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
   max-width: 360px; /* Define uma largura máxima do formulário (60% de 600px) */
   margin: auto; /* Centraliza o formulário horizontalmente */
   font-size: 0.54rem; /* Reduz o tamanho da fonte para 54% do tamanho padrão (60% de 0.9rem) */

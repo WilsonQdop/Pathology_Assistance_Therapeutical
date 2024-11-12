@@ -1,0 +1,10 @@
+.content{
+    display: grid;
+    grid-template-rows: 18dvh
+}
+
+.card-login{
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}

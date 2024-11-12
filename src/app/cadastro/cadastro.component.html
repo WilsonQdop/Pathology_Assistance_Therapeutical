@@ -1,10 +1,9 @@
 
-    <app-header></app-header>
-    <app-tabela (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
-    <app-lista [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
-    <app-hipocrates id="chat"></app-hipocrates>
-    <!-- O rodapé deve ser posicionado de forma flexível no final -->
-    <app-footer></app-footer>
-   
-
-  
+<app-header></app-header>
+<div class="content">
+    <app-tabela class="card-cadasto-pacientes" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
+    <app-lista class="card-lista-pacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+</div>
+<app-hipocrates id="chat"></app-hipocrates>
+<!-- O rodapé deve ser posicionado de forma flexível no final -->
+<app-footer></app-footer>

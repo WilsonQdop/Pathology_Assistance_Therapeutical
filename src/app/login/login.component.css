@@ -18,7 +18,7 @@
     background-color: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 400px;
   }
@@ -90,10 +90,10 @@
   }
   
   .google-btn {
-    background-color: #db4437;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px;
-    border: none;
+    border: 0.5px #c9c9c9 solid;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
@@ -101,6 +101,10 @@
   }
   
   .google-btn:hover {
-    background-color: #c1351d;
+    background-color: #fafafa;
+    border-color: #dbdbdb;
   }
   
+  .google-img{
+    max-width: 3dvh;
+  }

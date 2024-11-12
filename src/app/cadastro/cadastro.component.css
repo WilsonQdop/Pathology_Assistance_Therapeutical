@@ -20,8 +20,4 @@
     position: relative; /* Não sobrepõe o header */
     z-index: 1; /* Z-index mais baixo que o header */
   }
-
-
-  
-  
   

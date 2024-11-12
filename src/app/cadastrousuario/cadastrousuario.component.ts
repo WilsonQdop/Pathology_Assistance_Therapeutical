@@ -6,7 +6,7 @@ import { HipocratesComponent } from '../hipocrates/hipocrates.component';
 @Component({
   selector: 'app-cadastrousuario',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, HipocratesComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './cadastrousuario.component.html',
   styleUrl: './cadastrousuario.component.css'
 })

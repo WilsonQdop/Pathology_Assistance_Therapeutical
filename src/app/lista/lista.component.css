@@ -25,7 +25,7 @@
   position: fixed;
   top: 70px; /* Ajuste conforme a altura do cabeçalho */
   right: 20px;
-  width: 34%;
+  width: 55dvh;
   max-width: 100%;
   z-index: 1000;
   overflow: auto;
