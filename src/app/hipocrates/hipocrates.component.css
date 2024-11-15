@@ -11,7 +11,17 @@
   max-width: 90%; /* Largura máxima para telas menores */
   transition: all 0.3s ease; /* Transição suave ao minimizar/maximizar */
   overflow: hidden; /* Garante que o conteúdo desapareça ao minimizar */
-  
+}
+
+@media(max-width: 768px){
+  .image {
+    position: sticky;
+    margin: 10% 10% 1% 50%;
+    padding-bottom: 10%;
+    width: 50%; /* Largura inicial */
+    max-width: 50%; /* Largura máxima para telas menores */
+    border-top-right-radius: 0;
+    }
 }
 
 .minimize-btn {

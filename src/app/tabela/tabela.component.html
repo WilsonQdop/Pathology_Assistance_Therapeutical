@@ -5,13 +5,13 @@
 
 <!-- Formulário que será mostrado/ocultado -->
 <form *ngIf="formVisible" [formGroup]="employeeForm" (ngSubmit)="onSave()" class="p-3 border rounded" style="max-width: 600px; margin: auto;">
-  <div class="topo">
+  <div class="top">
     <div class="imagem">
       <img src="image.png" alt="Imagem">
     </div>
-    <div class="informacoes">
+    <div class="informations">
       <h3>Cadastre seu paciente</h3>
-      Aqui você pode digitar as informações do seu paciente.
+      <p>Aqui você pode digitar as informações do seu paciente.</p>
     </div>
   </div>
 

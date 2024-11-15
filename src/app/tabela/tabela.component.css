@@ -1,16 +1,16 @@
-.topo {
+.top {
   display: flex; /* Usar flexbox para alinhar os itens */
   flex-direction: column; /* Colocar os itens em coluna */
   align-items: center; /* Centraliza horizontalmente os itens */
   text-align: center; /* Centraliza o texto dentro da seção */
-  margin-bottom: 1.2%; /* Espaçamento abaixo do topo (60% de 2%) */
+  margin-bottom: 1%; /* Espaçamento abaixo do topo (60% de 2%) */
 }
 
-.topo .imagem {
+.top .imagem {
   margin-bottom: 1.2%; /* Espaçamento abaixo da imagem (60% de 2%) */
 }
 
-.topo .imagem img {
+.top .imagem img {
   max-width: 100%; /* Mantém a responsividade da imagem */
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 9px 9px 0 0; /* Arredonda os cantos superiores esquerdo e direito (60% de 15px) */
@@ -21,37 +21,46 @@
   flex-wrap: wrap; /* Permite que as colunas se movam para a próxima linha */
 }
 
-.topo h3 {
-  font-size: 1rem; /* Ajuste o tamanho da fonte para o h3 (60% de 1.5rem) */
+.top h3 {
+  font-size: 1.7rem; /* Ajuste o tamanho da fonte para o h3 (60% de 1.5rem) */
   margin: 0; /* Remove margens adicionais, se necessário */
   padding-bottom: 3%;
 }
 
-.topo p {
-  font-size: 0.60rem; /* Ajuste o tamanho da fonte para o parágrafo (60% de 0.8rem) */
+.top p {
+  font-size: 0.8rem; /* Ajuste o tamanho da fonte para o parágrafo (60% de 0.8rem) */
   margin: 0; /* Remove margens adicionais, se necessário */
 }
 
 form {
-  width: 70dvh; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
-  max-width: 360px; /* Define uma largura máxima do formulário (60% de 600px) */
+  width: 35%; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
+  max-width: 30%; /* Define uma largura máxima do formulário (60% de 600px) */
   margin: auto; /* Centraliza o formulário horizontalmente */
   font-size: 0.54rem; /* Reduz o tamanho da fonte para 54% do tamanho padrão (60% de 0.9rem) */
   display: grid; /* Usa grid para o layout */
   grid-template-columns: 1fr; /* Define uma única coluna */
   gap: 0.6rem; /* Espaço entre os itens do grid (60% de 1rem) */
+
+  & {
+    @media(max-width: 768px){
+      width: 95%; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
+      max-width: 95%; /* Define uma largura máxima do formulário (60% de 600px) */
+    }
+  }
 }
+
+
 
 .form-group {
   margin-bottom: 0.6rem; /* Espaçamento abaixo dos grupos de formulário (60% de 1rem) */
 }
 
 label {
-  font-size: 0.6rem; /* Tamanho da fonte dos rótulos (60% de 1rem) */
+  font-size: 0.9rem; /* Tamanho da fonte dos rótulos (60% de 1rem) */
 }
 
 input, textarea {
-  font-size: 0.6rem; /* Tamanho da fonte dos campos de entrada (60% de 1rem) */
+  font-size: 0.7rem; /* Tamanho da fonte dos campos de entrada (60% de 1rem) */
   padding: 0.3rem; /* Padding interno dos campos (60% de 0.5rem) */
   width: 100%; /* Faz os campos ocuparem toda a largura disponível */
 }
@@ -63,7 +72,7 @@ input, textarea {
 }
 
 .text-center {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .custom-button {

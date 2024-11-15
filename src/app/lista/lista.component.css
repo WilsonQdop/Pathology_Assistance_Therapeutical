@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  position: relative; /* Define a posição relativa para os filhos absolutos se posicionarem corretamente */
+  position: relative; /* Define a posição relativa para os filhos abdsolutos se posicionarem corretamente */
 }
 
 .btn-info {
@@ -25,13 +25,26 @@
   position: fixed;
   top: 70px; /* Ajuste conforme a altura do cabeçalho */
   right: 20px;
-  width: 55dvh;
-  max-width: 100%;
+  width: 29.5%;
+  max-width: 30%;
   z-index: 1000;
   overflow: auto;
   max-height: calc(100vh - 80px);
   margin-top: 0.5%;
 }
+
+@media(max-width:768px){
+
+  .lista-content {
+    position: static;
+    width: 85.5%;
+    max-width: 86%;
+  }
+
+  .lista-container {
+    position: sticky; /* Define a posição relativa para os filhos absolutos se posicionarem corretamente */
+  }
+} 
 
 .card-header {
   background-color: #265468;
