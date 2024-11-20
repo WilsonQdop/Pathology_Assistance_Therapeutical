@@ -1,0 +1,77 @@
+/* Estilos para a lista de navegação */
+.nav-links {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os itens da lista em linha */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+  }
+  
+  .nav-links li {
+    display: inline; /* Permite que os itens fiquem lado a lado */
+  }
+  
+  .nav-links a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto dos links */
+    font-weight: 500; /* Um peso de fonte mais leve */
+    transition: color 0.3s; /* Transição suave ao passar o mouse */
+  }
+  
+  .nav-links a:hover {
+    color: black; /* Cor ao passar o mouse */
+  }
+  
+  .register-link{
+    background-color: #FFA500; /* Cor de destaque para "Cadastrar" */
+    color: #265468;
+    font-weight: bold;
+    padding: 10px 7px 10px 7px;
+    border-radius: 6px;
+  }
+  
+  .login{
+    font-weight: bold;
+    text-decoration: underline !important;
+    text-decoration-color: white !important;
+    text-underline-offset: 3px;
+    margin: 0 10px 0 10px;
+    
+  }
+
+  .card {
+
+    background-color: #265468;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+  
+  .icon{
+    height: 30px;
+    width: 30px;
+  }
+  
+  .card-name {
+    font-size: 14px;
+    color: white;
+  }
+
+  .card:hover {
+    background-color: #FFA500;
+    color: #265468;
+    cursor: pointer;
+  }
+
+  
+  

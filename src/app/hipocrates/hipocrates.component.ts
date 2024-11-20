@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon'; // Importa o MatIconModule
+import { MatIconModule } from '@angular/material/icon';
+import { AuthService } from '../auth-service.service';
 
 @Component({
   selector: 'app-hipocrates',
@@ -11,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon'; // Importa o MatIconModu
   imports: [FormsModule, CommonModule, MatIconModule] // Adiciona os módulos necessários
 })
 export class HipocratesComponent {
+  isUserLogged: boolean = false;
   mensagem: string = ''; // Mensagem de texto
   audioUrl: string | null = null; // URL do áudio gravado
   private mediaRecorder: MediaRecorder | null = null; // Recorder para áudio
@@ -64,5 +66,20 @@ export class HipocratesComponent {
   // Função para minimizar ou expandir a área de mensagens
   minimizar() {
     this.minimizado = !this.minimizado;
+  }
+
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService.getLoginStatusObservable().subscribe((status: boolean) => {
+      this.isUserLogged = status;
+    });
+  }
+
+  toggleTemplate() {
+    this.isUserLogged = !this.isUserLogged;
+    if (this.isUserLogged) {
+    }
   }
 }

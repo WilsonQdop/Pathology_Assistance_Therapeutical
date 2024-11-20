@@ -1,0 +1,23 @@
+<div *ngIf="!isUserLogged; else userLogged">
+    <ul class="nav-links">
+      <li>
+        <a class="login" href="/login">Entrar</a>
+      </li>
+      <li>
+        <a href="/cadastro" class="register-link">Cadastrar</a>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #userLogged>
+    <div class="card">
+        <div class="card-content">
+          <div>
+            <img class="icon" src="img-one.png" alt="">
+          </div>
+          <div class="card-name">
+            {{username}}
+          </div>
+        </div>
+    </div>
+  </ng-template>

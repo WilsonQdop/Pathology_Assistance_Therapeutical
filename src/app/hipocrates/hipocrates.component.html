@@ -1,32 +1,36 @@
-<div class="image">
-  <!-- Botão de minimizar -->
-  <button class="minimize-btn" (click)="minimizar()">&#8211;</button>
+<div *ngIf="isUserLogged">
+  <div class="image">
+    
+    <!-- Botão de minimizar -->
+    <button class="minimize-btn" (click)="minimizar()">&#8211;</button>
 
-  <!-- Título e imagem -->
 
-  <img src="image-hipocrates.png" alt="Hipócrates">
-  <h6>Converse com Hipócrates</h6>
-  <!-- Área para exibir mensagens e áudios -->
-  <div class="messages" [ngClass]="{'hidden': minimizado}">
-    <div *ngFor="let mensagem of mensagens" class="message">
-      <!-- Mensagens de texto -->
-      <div *ngIf="mensagem.texto">{{ mensagem.texto }}</div>
+    <img src="image-hipocrates.png" alt="Hipócrates">
+    <h6>Converse com Hipócrates</h6>
 
-      <!-- Mensagens de áudio -->
-      <audio *ngIf="mensagem.audioUrl" controls>
-        <source [src]="mensagem.audioUrl" type="audio/webm">
-        Seu navegador não suporta o elemento de áudio.
-      </audio>
+    <!-- Área para exibir mensagens e áudios -->
+    <div class="messages" [ngClass]="{'hidden': minimizado}">
+      <div *ngFor="let mensagem of mensagens" class="message">
+        <!-- Mensagens de texto -->
+        <div *ngIf="mensagem.texto">{{ mensagem.texto }}</div>
+
+        <!-- Mensagens de áudio -->
+        <audio *ngIf="mensagem.audioUrl" controls>
+          <source [src]="mensagem.audioUrl" type="audio/webm">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+    </div>
+
+
+
+    <div class="message-bar">
+      <input type="text" [(ngModel)]="mensagem" placeholder="Digite sua mensagem..." />
+      <button (click)="enviarMensagem()" class="btn-success">Enviar</button>
+      <button (click)="gravando ? pararGravacao() : iniciarGravacao()">
+        <mat-icon class="btn-success">{{ gravando ? 'stop' : 'mic' }}</mat-icon></button>
     </div>
   </div>
+</div> 
 
 
-  <!-- Barra de entrada de mensagens -->
-  <div class="message-bar">
-    <input type="text" [(ngModel)]="mensagem" placeholder="Digite sua mensagem..." />
-    <button (click)="enviarMensagem()" class="btn-success">Enviar</button>
-    <button (click)="gravando ? pararGravacao() : iniciarGravacao()">
-      <mat-icon class="btn-success">{{ gravando ? 'stop' : 'mic' }}</mat-icon>
-    </button>
-  </div>
-</div>

@@ -1,0 +1,8 @@
+
+<div *ngIf="isUserLogged;else userLogged">
+    <p>user-profile works!</p>
+</div>
+
+<ng-template #userLogged>
+    <app-login-message></app-login-message>
+</ng-template>

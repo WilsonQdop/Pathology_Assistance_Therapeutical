@@ -1,0 +1,77 @@
+<!-- Botão para exibir/ocultar o formulário -->
+<button (click)="toggleForm()" class="btn btn-primary custom-button">
+  {{ formVisible ? 'Ocultar' : 'Mostrar' }} cadastro paciente
+</button>
+
+<!-- Formulário que será mostrado/ocultado -->
+<form *ngIf="formVisible" [formGroup]="employeeForm" (ngSubmit)="onSave()" class="p-3 border rounded" style="max-width: 600px; margin: auto;">
+  <div class="top">
+    <div class="imagem">
+      <img src="image.png" alt="Imagem">
+    </div>
+    <div class="informations">
+      <h3>Cadastre seu paciente</h3>
+      <p>Aqui você pode digitar as informações do seu paciente.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" formControlName="nome" class="form-control" placeholder="Nome do paciente" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="text" formControlName="email" class="form-control" placeholder="E-mail do paciente" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="text" formControlName="celular" class="form-control" placeholder="Celular do paciente" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="cidade">Cidade</label>
+        <input type="text" formControlName="cidade" class="form-control" placeholder="Cidade natal do paciente" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        <input type="text" formControlName="estado" class="form-control" placeholder="Estado do Paciente" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="codigoPin">Código PIN</label>
+        <input type="text" formControlName="codigoPin" class="form-control" placeholder="PIN do paciente" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" formControlName="cpf" class="form-control" placeholder="CPF do paciente" required>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <label for="endereco">Endereço</label>
+        <input formControlName="endereco" class="form-control" placeholder="Bairro, rua ou avenida, número" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row pt-2">
+    <div class="col-6 text-center">
+      <button type="reset" class="btn btn-secondary ">Reiniciar</button>
+    </div>
+    <div class="col-6 text-center">
+      <button type="submit" class="btn btn-success ">Salvar Paciente</button>
+    </div>
+  </div>
+</form>

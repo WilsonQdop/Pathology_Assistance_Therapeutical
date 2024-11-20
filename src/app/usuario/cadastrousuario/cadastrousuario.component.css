@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  text-align: center;
+  color: #265468;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 20px; /* Espaço entre colunas */
+  margin-bottom: 20px;
+}
+
+.form-row .full-width {
+  grid-column: span 2; /* Campos de largura total ocupam duas colunas */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column; /* Empilha labels e inputs verticalmente */
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between; /* Espaço entre o label e o span */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 5px; /* Espaço entre a linha de labels e o input */
+}
+
+label {
+  font-size: 14px;
+  color: #265468;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  white-space: nowrap; /* Evita quebra de linha no texto do erro */
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #265468;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #265468;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e4f63;
+}
+
+#dob{
+  width: 400px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* Centralizar o ícone de sucesso e a mensagem de confirmação */
+.success-icon,
+.confirmation-message {
+  position: fixed; /* Fixar o elemento na tela */
+  top: 50%; /* Posicionar no meio da tela */
+  left: 50%; /* Posicionar no meio da tela */
+  transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+  text-align: center;
+  z-index: 9999; /* Garante que o ícone fique acima de outros elementos */
+  opacity: 0; /* Inicialmente invisível */
+  visibility: hidden; /* Não será visível até a animação */
+}
+
+
+.confirmation-message {
+  font-size: 1.5rem;
+  color: green;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.confirmation-message.visible {
+  visibility: visible;
+  opacity: 1;
+}

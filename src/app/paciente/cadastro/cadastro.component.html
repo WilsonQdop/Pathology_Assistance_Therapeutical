@@ -1,0 +1,9 @@
+
+<div *ngIf="isUserLogged;else userLogged">
+<app-tabela (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
+<app-lista [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+</div>
+
+<ng-template #userLogged>
+    <app-login-message></app-login-message>
+</ng-template>

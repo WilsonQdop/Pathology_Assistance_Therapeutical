@@ -40,27 +40,3 @@ nav {
   color: white; /* Cor cinza para a descrição */
 }
 
-/* Estilos para a lista de navegação */
-.nav-links {
-  list-style-type: none; /* Remove os marcadores da lista */
-  display: flex; /* Alinha os itens da lista em linha */
-  gap: 20px; /* Espaçamento entre os itens */
-  margin: 0; /* Remove a margem padrão */
-  padding: 0; /* Remove o preenchimento padrão */
-}
-
-.nav-links li {
-  display: inline; /* Permite que os itens fiquem lado a lado */
-}
-
-.nav-links a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: white; /* Cor do texto dos links */
-  font-weight: 500; /* Um peso de fonte mais leve */
-  transition: color 0.3s; /* Transição suave ao passar o mouse */
-}
-
-.nav-links a:hover {
-  color: black; /* Cor ao passar o mouse */
-}
-
