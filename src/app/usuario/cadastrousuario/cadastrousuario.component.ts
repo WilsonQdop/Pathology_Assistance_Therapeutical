@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; // Importando o Router
+import { ConfirmationMessageComponent } from '../../confirmation-message/confirmation-message.component';
 
 
 interface User {
@@ -18,7 +19,7 @@ interface User {
 @Component({
   selector: 'app-cadastrousuario',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ConfirmationMessageComponent],
   templateUrl: './cadastrousuario.component.html',
   styleUrls: ['./cadastrousuario.component.css'],
 })

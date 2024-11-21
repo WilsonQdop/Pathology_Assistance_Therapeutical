@@ -21,6 +21,10 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 600px;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 
 h2 {
@@ -109,11 +113,11 @@ button:hover {
 }
 
 
-.confirmation-message {
+/* .confirmation-message {
   font-size: 1.5rem;
   color: green;
   animation: fadeIn 1s ease-out forwards;
-}
+} */
 
 @keyframes fadeIn {
   from {

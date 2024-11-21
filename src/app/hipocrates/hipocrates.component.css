@@ -21,6 +21,7 @@
     width: 50%; /* Largura inicial */
     max-width: 50%; /* Largura máxima para telas menores */
     border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     }
 }
 
