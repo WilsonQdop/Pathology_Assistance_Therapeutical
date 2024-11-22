@@ -1,0 +1,11 @@
+
+<aside class="sidebar">
+    <ul>
+      <li 
+        *ngFor="let option of options" 
+        [ngClass]="{ 'selected': selectedOption === option }"
+        (click)="selectOption(option)">
+        {{ option }}
+      </li>
+    </ul>
+  </aside>

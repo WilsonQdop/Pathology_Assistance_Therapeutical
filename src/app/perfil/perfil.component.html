@@ -1,0 +1,52 @@
+<div class="prontuario-container">
+    <div class="prancheta">
+      <header>
+        <h2>Prontuário do Paciente</h2>
+      </header>
+      <div class="foto-container">
+        <img src="img-one.png" alt="Foto do Paciente" class="foto-paciente"/>
+      </div>
+      <section class="informacoes-paciente">
+        <p><strong>Nome:</strong> {{ paciente.nome }}</p>
+        <p><strong>Idade:</strong> {{ paciente.idade }} anos</p>
+        <p><strong>Tipo Sanguíneo:</strong> {{ paciente.tipoSanguineo }}</p>
+        <p><strong>CPF:</strong> {{ paciente.cpf }}</p>
+        <p><strong>Endereço:</strong> {{ paciente.endereco }}</p>
+        <button (click)="toggleEditar()">Editar Informações</button>
+      </section>
+  
+      <section class="form-edicao" *ngIf="editando">
+        <h3>Editar Informações do Paciente</h3>
+        <form (ngSubmit)="salvarInformacoes()">
+          <label>
+            Nome:
+            <input type="text" [(ngModel)]="paciente.nome" name="nome" />
+          </label>
+          <label>
+            Idade:
+            <input type="number" [(ngModel)]="paciente.idade" name="idade" />
+          </label>
+          <label>
+            Tipo Sanguíneo:
+            <input type="text" [(ngModel)]="paciente.tipoSanguineo" name="tipoSanguineo" />
+          </label>
+          <label>
+            CPF:
+            <input type="text" [(ngModel)]="paciente.cpf" name="cpf" />
+          </label>
+          <label>
+            Endereço:
+            <input type="text" [(ngModel)]="paciente.endereco" name="endereco" />
+          </label>
+          <button type="submit">Salvar</button>
+          <button type="button" (click)="toggleEditar()">Cancelar</button>
+        </form>
+      </section>
+  
+      <section class="upload-exames">
+        <h3>Upload de Exames</h3>
+        <input type="file" accept=".pdf" (change)="onFileSelected($event)" />
+        <button (click)="uploadExame()">Enviar</button>
+      </section>
+    </div>
+  </div>

@@ -1,77 +1,112 @@
 /* Estilos para a lista de navegação */
 .nav-links {
-    list-style-type: none; /* Remove os marcadores da lista */
-    display: flex; /* Alinha os itens da lista em linha */
-    gap: 10px; /* Espaçamento entre os itens */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o preenchimento padrão */
-  }
-  
-  .nav-links li {
-    display: inline; /* Permite que os itens fiquem lado a lado */
-  }
-  
-  .nav-links a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: white; /* Cor do texto dos links */
-    font-weight: 500; /* Um peso de fonte mais leve */
-    transition: color 0.3s; /* Transição suave ao passar o mouse */
-  }
-  
-  .nav-links a:hover {
-    color: black; /* Cor ao passar o mouse */
-  }
-  
-  .register-link{
-    background-color: #FFA500; /* Cor de destaque para "Cadastrar" */
-    color: #265468;
-    font-weight: bold;
-    padding: 10px 7px 10px 7px;
-    border-radius: 6px;
-  }
-  
-  .login{
-    font-weight: bold;
-    text-decoration: underline !important;
-    text-decoration-color: white !important;
-    text-underline-offset: 3px;
-    margin: 0 10px 0 10px;
-    
-  }
+  list-style-type: none; /* Remove os marcadores da lista */
+  display: flex; /* Alinha os itens da lista em linha */
+  gap: 10px; /* Espaçamento entre os itens */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o preenchimento padrão */
+}
 
-  .card {
+.nav-links li {
+  display: inline; /* Permite que os itens fiquem lado a lado */
+}
 
-    background-color: #265468;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 50px;
-    width: 200px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.nav-links a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: white; /* Cor do texto dos links */
+  font-weight: 500; /* Um peso de fonte mais leve */
+  transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
 
-  }
-  
-  .icon{
-    height: 30px;
-    width: 30px;
-  }
-  
-  .card-name {
-    font-size: 14px;
-    color: white;
-  }
+.nav-links a:hover {
+  color: black; /* Cor ao passar o mouse */
+}
 
-  .card:hover {
-    background-color: #FFA500;
-    color: #265468;
-    cursor: pointer;
-  }
+.register-link {
+  background-color: #FFA500; /* Cor de destaque para "Cadastrar" */
+  color: #265468;
+  font-weight: bold;
+  padding: 10px 7px 10px 7px;
+  border-radius: 6px;
+}
 
-  
-  
+.login {
+  font-weight: bold;
+  text-decoration: underline !important;
+  text-decoration-color: white !important;
+  text-underline-offset: 3px;
+  margin: 0 10px 0 10px;
+}
+
+/* Estilos do Card */
+.card {
+  background-color: #265468;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.card-name {
+  font-size: 14px;
+  color: white;
+}
+
+.card:hover {
+  background-color: #FFA500;
+  color: #265468;
+}
+
+.card {
+  cursor: pointer;
+}
+
+/* Estilos para o menu de opções (aparecendo abaixo do card) */
+.menu-options {
+  position: absolute;
+  top: 100%; /* Posiciona o menu abaixo do card */
+  left: 0;
+  width: 100%; /* Faz o menu ter a mesma largura do card */
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Espaçamento entre o card e o menu */
+}
+
+.menu-options ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-options li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-options li:last-child {
+  border-bottom: none;  /* Remove a borda do último item */
+}
+
+.menu-options li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-options li:hover {
+  background-color: #f0f0f0;
+}

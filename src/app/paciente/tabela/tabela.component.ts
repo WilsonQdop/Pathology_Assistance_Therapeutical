@@ -18,15 +18,15 @@ export class TabelaComponent {
 
   constructor() {
     this.employeeForm = new FormGroup({
-      nome: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      email: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      celular: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      cidade: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      estado: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      codigoPin: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      cpf: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      endereco: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
-      ordem: new FormControl('', { validators: [/* Adicione suas validações aqui, se necessário */] }),
+      nome: new FormControl(''),
+      email: new FormControl(''),
+      celular: new FormControl(''),
+      cidade: new FormControl(''),
+      estado: new FormControl(''),
+      codigoPin: new FormControl(''),
+      cpf: new FormControl(''),
+      endereco: new FormControl(''),
+      ordem: new FormControl(''),
     });
   }
 

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  // Importa o Router
 import { AuthService } from '../auth-service.service';
 
 @Component({
@@ -12,8 +13,9 @@ import { AuthService } from '../auth-service.service';
 export class StatusContaHeaderComponent implements OnInit {
   isUserLogged: boolean = false;
   username: string = '';
+  showMenu: boolean = false;  // Variável de controle para o menu
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}  // Injeção do Router
 
   ngOnInit() {
     this.authService.getLoginStatusObservable().subscribe((status: boolean) => {
@@ -22,18 +24,21 @@ export class StatusContaHeaderComponent implements OnInit {
   
     this.authService.getUsernameObservable().subscribe((username: string | null) => {
       this.username = username || '';
-
     });
-  
   }
 
-  toggleTemplate() {
-    this.isUserLogged = !this.isUserLogged;
-    if (this.isUserLogged) {
-    }
+  toggleMenu() {
+    this.showMenu = !this.showMenu;  // Alterna a exibição do menu
   }
 
+  logout() {
+    this.authService.logout();  // Implementar lógica de logout no seu AuthService
+    this.isUserLogged = false;
+    this.showMenu = false;
+    
 
-
-
+    setTimeout(() => {
+      this.router.navigate(['/login']);
+    }, 1000); // 2 segundos (2000 milissegundos)
+  }
 }

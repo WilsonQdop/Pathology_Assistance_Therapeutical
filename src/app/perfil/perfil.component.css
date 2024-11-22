@@ -1,0 +1,105 @@
+.prontuario-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .prancheta {
+    background: #f4f4f4;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .prancheta header {
+    background: #b58b4b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .informacoes-paciente {
+    margin: 20px 0;
+  }
+  
+  .upload-exames {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .foto-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .foto-paciente {
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+  }
+
+  .form-edicao {
+    margin: 20px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="button"] {
+    background-color: #f44336;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
+  
