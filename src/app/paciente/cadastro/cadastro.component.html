@@ -1,7 +1,21 @@
 
 <div *ngIf="isUserLogged;else userLogged">
-<app-tabela (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
-<app-lista [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+    <div class="main">
+        <aside class="sidebar">
+            <ul>
+              <li>Home Workspace</li>
+              <li (click)="togglePacientes()">Meus Pacientes</li>           
+              <li (click)="toggleCadastro()">Cadastrar Pacientes</li>                    
+              <li>Dashboards</li>
+              <li>Suporte</li>
+            </ul>
+        </aside>
+
+        <app-tabela *ngIf="showCadastro" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
+
+        <app-lista *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+
+    </div>
 </div>
 
 <ng-template #userLogged>

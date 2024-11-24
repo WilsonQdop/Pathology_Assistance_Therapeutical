@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  position: relative; /* Define a posição relativa para os filhos abdsolutos se posicionarem corretamente */
+  position: relative;
 }
 
 .btn-info {
@@ -36,7 +36,7 @@
 @media(max-width:768px){
 
   .lista-content {
-    position: static;
+    position: absolute;
     width: 85.5%;
     max-width: 86%;
   }
@@ -62,7 +62,7 @@
   border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%; /* Define a largura fixa */
-    height: 400px; /* Define a altura fixa */
+    height: auto; /* Define a altura fixa */
     overflow-y: auto; /* Adiciona barra de rolagem para o conteúdo interno */
 }
 

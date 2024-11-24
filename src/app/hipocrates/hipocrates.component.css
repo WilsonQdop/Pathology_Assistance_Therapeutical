@@ -13,17 +13,7 @@
   overflow: hidden; /* Garante que o conteúdo desapareça ao minimizar */
 }
 
-@media(max-width: 768px){
-  .image {
-    position: sticky;
-    margin: 10% 10% 1% 50%;
-    padding-bottom: 10%;
-    width: 50%; /* Largura inicial */
-    max-width: 50%; /* Largura máxima para telas menores */
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    }
-}
+
 
 .minimize-btn {
   position: absolute;
@@ -57,6 +47,14 @@
   margin-bottom: 10px;
   text-align: left;
   word-wrap: break-word;
+}
+
+.Hipocrates-icon img{
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  height: 100px;
+  cursor: pointer;
 }
 
 .message-bar {
@@ -98,20 +96,4 @@
   display: block;
   margin: 0 auto;
   border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-  .image {
-    width: 80%; /* Ajusta largura para telas pequenas */
-    bottom: 20px;
-    right: 10px;
-  }
-
-  .message-bar input {
-    font-size: 12px;
-  }
-
-  .message-bar button {
-    font-size: 14px;
-  }
 }

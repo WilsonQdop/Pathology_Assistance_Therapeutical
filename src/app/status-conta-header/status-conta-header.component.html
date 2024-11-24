@@ -9,7 +9,7 @@
   </ul>
 </div>
 
-<ng-template #userLogged>
+<ng-template class="template" #userLogged>
   <div class="card" (click)="toggleMenu()">
     <div class="card-content">
       <div>
@@ -19,6 +19,7 @@
         {{username}}
       </div>
     </div>
+
     <div *ngIf="showMenu" class="menu-options">
       <ul>
         <li><a href="/perfil">Perfil</a></li>

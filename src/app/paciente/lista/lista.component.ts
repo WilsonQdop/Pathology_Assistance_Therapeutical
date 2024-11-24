@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class ListaComponent {
   @Input() employeeList: any[] = []; // Recebe a lista de pacientes
   @Output() employeeListChange = new EventEmitter<any[]>(); // Evento para comunicar mudanças na lista
-  showList = false; // Controle para exibir/ocultar a lista
+  showList = true; // Controle para exibir/ocultar a lista
   novoPaciente: any = {}; // Objeto para um novo paciente
   searchTerm: string = ''; // Propriedade para armazenar o termo de pesquisa
 

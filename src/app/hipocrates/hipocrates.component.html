@@ -1,10 +1,12 @@
 <div *ngIf="isUserLogged">
-  <div class="image">
-    
-    <!-- Botão de minimizar -->
-    <button class="minimize-btn" (click)="minimizar()">&#8211;</button>
 
+  <div *ngIf="!showHipocrates" class="Hipocrates-icon" (click) = toggleMenu() >
+    <img src="image-hipocrates.png" alt="imagem hipócartes">
+  </div>
 
+  <div *ngIf="showHipocrates" class="image">
+
+    <button class="minimize-btn" (click)=toggleMenu()>&#8211;</button>
     <img src="image-hipocrates.png" alt="Hipócrates">
     <h6>Converse com Hipócrates</h6>
 
@@ -31,6 +33,7 @@
         <mat-icon class="btn-success">{{ gravando ? 'stop' : 'mic' }}</mat-icon></button>
     </div>
   </div>
+  
 </div> 
 
 

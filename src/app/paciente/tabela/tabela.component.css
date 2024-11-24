@@ -33,23 +33,14 @@
 }
 
 form {
-  width: 35%; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
-  max-width: 30%; /* Define uma largura máxima do formulário (60% de 600px) */
-  margin: auto; /* Centraliza o formulário horizontalmente */
+  width: 100%; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%)*/;
+  margin: auto;  /* Centraliza o formulário horizontalmente */
   font-size: 0.54rem; /* Reduz o tamanho da fonte para 54% do tamanho padrão (60% de 0.9rem) */
   display: grid; /* Usa grid para o layout */
   grid-template-columns: 1fr; /* Define uma única coluna */
   gap: 0.6rem; /* Espaço entre os itens do grid (60% de 1rem) */
 
-  & {
-    @media(max-width: 768px){
-      width: 95%; /* Define a largura do formulário como 48% da largura do contêiner pai (60% de 80%) */
-      max-width: 95%; /* Define uma largura máxima do formulário (60% de 600px) */
-    }
-  }
 }
-
-
 
 .form-group {
   margin-bottom: 0.6rem; /* Espaçamento abaixo dos grupos de formulário (60% de 1rem) */
@@ -98,3 +89,4 @@ input, textarea {
   background-color: #5f8f9c; /* Cor ao passar o mouse */
   border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
 }
+

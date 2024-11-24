@@ -1,0 +1,8 @@
+
+<div *ngIf="isUserLogged;else userLogged">
+        <app-cadastro></app-cadastro>
+ </div>
+    
+    <ng-template #userLogged>
+        <app-login-message></app-login-message>
+    </ng-template>

@@ -11,13 +11,16 @@ import { LoginMessageComponent } from '../../login-message/login-message.compone
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent],
+  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent, CommonModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
 export class CadastroComponent {
   isUserLogged: boolean = false;
   employeeList: any[] = []; // Lista de pacientes
+  showCadastro: boolean = false;
+  showPacientes: boolean = false;
+
 
   onPacienteCadastrado(paciente: any) {
     this.employeeList.push(paciente); // Adiciona o paciente à lista
@@ -35,6 +38,21 @@ export class CadastroComponent {
     if (this.isUserLogged) {
     }
   }
+
+  togglePacientes() {
+    this.showPacientes = !this.showPacientes;
+    this.showCadastro = false;
+    if (this.showPacientes) {
+    }
+  }
+
+  toggleCadastro() {
+    this.showCadastro = !this.showCadastro;
+    this.showPacientes = false;
+    if (this.showCadastro) {
+    }
+  }
+
 
 
 }

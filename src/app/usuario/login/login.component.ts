@@ -30,7 +30,7 @@ export class LoginComponent {
     if (user) {
       console.log('Usuário encontrado:', user.username); // Log para verificar
       this.authService.setLoginStatus(true, user.username); // Certifique-se de passar o username correto
-      this.router.navigate(['/home']);
+      this.router.navigate(['/workspace']);
     } else {
       this.authService.setLoginStatus(false);
       alert("Usuário ou senha inválidos.");

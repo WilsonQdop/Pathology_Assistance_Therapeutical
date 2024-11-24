@@ -11,8 +11,6 @@ import { WorkspacePageComponent } from './pages/workspace-page/workspace-page.co
 export const routes: Routes = [ 
     {path: "", component: HomepageComponent},
     {path: "login", component: LoginpageComponent},
-    {path: "cadastroPacientes", component: CadastroComponent},
-    {path: "home", component: HomepageComponent},
     {path: "cadastro", component: CadastrousuarioComponent},
     {path: "perfil", component: UserProfileComponent},
     {path: "oi", component: PerfilComponent},

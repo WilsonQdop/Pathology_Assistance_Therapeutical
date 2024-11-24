@@ -1,9 +1,11 @@
-<!-- Botão para exibir/ocultar o formulário -->
+<!-- Botão para exibir/ocultar o formulário
 <button (click)="toggleForm()" class="btn btn-primary custom-button">
   {{ formVisible ? 'Ocultar' : 'Mostrar' }} cadastro paciente
-</button>
-
+</button> -->
 <!-- Formulário que será mostrado/ocultado -->
+
+
+
 <form *ngIf="formVisible" [formGroup]="employeeForm" (ngSubmit)="onSave()" class="p-3 border rounded" style="max-width: 600px; margin: auto;">
   <div class="top">
     <div class="imagem">

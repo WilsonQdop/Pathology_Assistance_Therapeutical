@@ -13,6 +13,8 @@ import { AuthService } from '../auth-service.service';
 })
 export class HipocratesComponent {
   isUserLogged: boolean = false;
+
+  showHipocrates: boolean = false;
   mensagem: string = ''; // Mensagem de texto
   audioUrl: string | null = null; // URL do áudio gravado
   private mediaRecorder: MediaRecorder | null = null; // Recorder para áudio
@@ -81,5 +83,9 @@ export class HipocratesComponent {
     this.isUserLogged = !this.isUserLogged;
     if (this.isUserLogged) {
     }
+  }
+
+  toggleMenu() {
+    this.showHipocrates = !this.showHipocrates;  // Alterna a exibição do menu
   }
 }

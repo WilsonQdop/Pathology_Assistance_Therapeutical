@@ -1,105 +1,99 @@
+img{
+  width: 200px;
+  height:250px;
+}
+
 .prontuario-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
-  
-  .prancheta {
-    background: #f4f4f4;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    width: 400px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  .prancheta header {
-    background: #b58b4b;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 1.5em;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .informacoes-paciente {
-    margin: 20px 0;
-  }
-  
-  .upload-exames {
-    margin-top: 20px;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .foto-container {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-  }
-  
-  .foto-paciente {
-    width: 120px;
-    height: 120px;
-    border-radius: 10%;
-    border: 2px solid #ccc;
-    object-fit: cover;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prancheta {
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Mantém fixo no scroll */
+  top: 20px; /* Distância do topo */
+}
+
+.dados-adicionais {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.abas-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e6e6e6;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.abas-container button {
+  flex-shrink: 0;
+  background: #d9d9d9;
+  border: none;
+  margin-right: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.abas-container button.ativa {
+  background: #b58b4b;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.abas-container button:hover:not(.ativa) {
+  background: #c5a471;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.conteudo-aba {
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .prontuario-container {
+    flex-direction: column;
   }
 
-  .form-edicao {
-    margin: 20px 0;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
+  .prancheta {
+    position: relative; /* Deixa móvel em telas pequenas */
+    top: 0;
+    margin-bottom: 20px;
   }
-  
-  form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  form input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  button[type="button"] {
-    background-color: #f44336;
-  }
-  
-  button[type="button"]:hover {
-    background-color: #e53935;
-  }
-  
-  
+}

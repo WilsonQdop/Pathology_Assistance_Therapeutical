@@ -1,6 +1,7 @@
 <div class="prontuario-container">
+  <div class="card">
     <div class="prancheta">
-      <header>
+      <header class="header-card">
         <h2>Prontuário do Paciente</h2>
       </header>
       <div class="foto-container">
@@ -14,39 +15,27 @@
         <p><strong>Endereço:</strong> {{ paciente.endereco }}</p>
         <button (click)="toggleEditar()">Editar Informações</button>
       </section>
-  
-      <section class="form-edicao" *ngIf="editando">
-        <h3>Editar Informações do Paciente</h3>
-        <form (ngSubmit)="salvarInformacoes()">
-          <label>
-            Nome:
-            <input type="text" [(ngModel)]="paciente.nome" name="nome" />
-          </label>
-          <label>
-            Idade:
-            <input type="number" [(ngModel)]="paciente.idade" name="idade" />
-          </label>
-          <label>
-            Tipo Sanguíneo:
-            <input type="text" [(ngModel)]="paciente.tipoSanguineo" name="tipoSanguineo" />
-          </label>
-          <label>
-            CPF:
-            <input type="text" [(ngModel)]="paciente.cpf" name="cpf" />
-          </label>
-          <label>
-            Endereço:
-            <input type="text" [(ngModel)]="paciente.endereco" name="endereco" />
-          </label>
-          <button type="submit">Salvar</button>
-          <button type="button" (click)="toggleEditar()">Cancelar</button>
-        </form>
-      </section>
-  
-      <section class="upload-exames">
-        <h3>Upload de Exames</h3>
-        <input type="file" accept=".pdf" (change)="onFileSelected($event)" />
-        <button (click)="uploadExame()">Enviar</button>
-      </section>
+    </div>
+
+    <div class="dados-adicionais">
+      <nav class="abas-container">
+        <button
+          *ngFor="let aba of abas"
+          [class.ativa]="aba === abaSelecionada"
+          (click)="selecionarAba(aba)"
+        >
+          {{ aba }}
+        </button>
+      </nav>
+      <div class="conteudo-aba">
+        <div *ngIf="abaSelecionada === 'Comorbidades'">
+          <p>Conteúdo da aba: Comorbidades</p>
+        </div>
+        <div *ngIf="abaSelecionada === 'Alergias conhecidas'">
+          <p>Conteúdo da aba: Alergias conhecidas</p>
+        </div>
+        <!-- Adicione outras seções conforme necessário -->
+      </div>
     </div>
   </div>
+</div>
