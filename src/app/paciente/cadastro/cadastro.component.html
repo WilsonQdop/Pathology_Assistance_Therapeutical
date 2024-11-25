@@ -3,16 +3,15 @@
     <div class="main">
         <aside class="sidebar">
             <ul>
-              <li>Home Workspace</li>
+              <li (click)="toggleHomeWorkspace()"> Home Workspace</li>
               <li (click)="togglePacientes()">Meus Pacientes</li>           
               <li (click)="toggleCadastro()">Cadastrar Pacientes</li>                    
-              <li>Dashboards</li>
-              <li>Suporte</li>
+              <li (click)="toggleDashboard()">Dashboards</li>
+              <li (click)="toggleSuporte()">Suporte</li>
             </ul>
         </aside>
-
+        <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
         <app-tabela *ngIf="showCadastro" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
-
         <app-lista *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
 
     </div>

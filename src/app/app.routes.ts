@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { CadastroComponent } from './paciente/cadastro/cadastro.component';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { CadastrousuarioComponent } from './usuario/cadastrousuario/cadastrousuario.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
