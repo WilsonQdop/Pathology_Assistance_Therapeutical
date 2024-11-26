@@ -6,6 +6,7 @@ import { AuthService } from '../../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { LoginMessageComponent } from '../../login-message/login-message.component';
 import { HomeWorkspaceComponent } from '../../home-workspace/home-workspace.component';
+import { PacienteWorkspaceComponent } from '../../paciente-workspace/paciente-workspace.component';
 
 
 
@@ -13,7 +14,7 @@ import { HomeWorkspaceComponent } from '../../home-workspace/home-workspace.comp
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent, CommonModule,HomeWorkspaceComponent],
+  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent, CommonModule,HomeWorkspaceComponent, PacienteWorkspaceComponent],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
@@ -26,6 +27,7 @@ export class CadastroComponent {
   showHomeWorkspace: boolean = true;
   showDashboard: boolean = false;
   showSuporte: boolean = false;
+  showPacienteWorkspace: boolean = false;
 
 
   onPacienteCadastrado(paciente: any) {
@@ -99,8 +101,6 @@ export class CadastroComponent {
     if (this.showSuporte) {
     }
   }
-
-  
 
 
 

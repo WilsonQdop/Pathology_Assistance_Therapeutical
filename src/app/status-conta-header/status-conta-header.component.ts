@@ -20,6 +20,7 @@ export class StatusContaHeaderComponent implements OnInit {
   ngOnInit() {
     this.authService.getLoginStatusObservable().subscribe((status: boolean) => {
       this.isUserLogged = status;
+      this.showMenu = false;
     });
   
     this.authService.getUsernameObservable().subscribe((username: string | null) => {
@@ -33,8 +34,9 @@ export class StatusContaHeaderComponent implements OnInit {
 
   logout() {
     this.authService.logout();  // Implementar lógica de logout no seu AuthService
-    this.isUserLogged = false;
     this.showMenu = false;
+    this.isUserLogged = false;
+    
     
 
     setTimeout(() => {

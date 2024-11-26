@@ -2,6 +2,7 @@
 header {
   background-color: #265468; /* Cor de fundo suave */
   padding: 0.1% 1%; /* Espaçamento interno */
+  position: relative;
 }
 
 /* Estilos para o nav */

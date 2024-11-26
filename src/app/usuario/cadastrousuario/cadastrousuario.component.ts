@@ -91,9 +91,6 @@ export class CadastrousuarioComponent {
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
   
-    // Logando o vetor de usuários no console
-    console.log(users);
-  
     // Exibe a animação de sucesso
     this.showSuccessAnimation();
   

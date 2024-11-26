@@ -12,6 +12,8 @@ export class AuthService {
     // Verifica o status de login armazenado no localStorage ao iniciar o serviço
     const storedLoginStatus = localStorage.getItem('isLoggedIn');
     const storedUsername = localStorage.getItem('username');
+
+
     this.isLoggedInSubject = new BehaviorSubject<boolean>(storedLoginStatus === 'true');
     this.usernameSubject = new BehaviorSubject<string | null>(storedUsername);
   }

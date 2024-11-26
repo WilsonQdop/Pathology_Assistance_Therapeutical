@@ -28,7 +28,6 @@ export class LoginComponent {
     const user = users.find((u: any) => u.username === username && u.password === password);
   
     if (user) {
-      console.log('Usuário encontrado:', user.username); // Log para verificar
       this.authService.setLoginStatus(true, user.username); // Certifique-se de passar o username correto
       this.router.navigate(['/workspace']);
     } else {
