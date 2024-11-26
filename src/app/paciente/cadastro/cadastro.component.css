@@ -1,10 +1,20 @@
 .sidebar {
     background-color: white;
     width: 250px;
+    max-height: 90%;
     padding: 20px;
+    margin-top: 6.8dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;/* Distribui os itens com espaço igual ao redor */
+
+    /* backgroud da nav */
+    /* background-image: url(https://wallpapers.com/images/featured/dark-abstract-bsid6neh0qavpfd1.jpg);
+    height: 90dvh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
   }
   
   .sidebar ul {
@@ -45,6 +55,14 @@
     display: flex;
     flex-direction: row;
     align-self: center;
+
+    /* background do content */
+    /* background-image: url(https://wallpapers.com/images/featured/dark-abstract-bsid6neh0qavpfd1.jpg);
+    height: 100dvh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
   }
 
 

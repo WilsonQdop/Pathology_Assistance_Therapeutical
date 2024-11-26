@@ -1,6 +1,15 @@
 .content{
+    background-image: url(https://wallpapers.com/images/featured/dark-abstract-bsid6neh0qavpfd1.jpg);
+    height: 100dvh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & .card-login{
     position: absolute; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+    }
 }

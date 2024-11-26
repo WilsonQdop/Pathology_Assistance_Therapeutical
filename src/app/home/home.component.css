@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  padding: 1rem;
+  margin-top: 10dvh;
   position: absolute;
   justify-content:center;
   width: 100%;
@@ -10,7 +10,7 @@
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15dvw;
   margin: 0;
   padding: 0;
 }
@@ -37,13 +37,13 @@
   & .wellcome-text {
     grid-row: 1/2;
     text-align: center;
-    padding-top: 28dvh;
+    padding-top: 43dvh;
     width: 100%;
     height: 100%;
     color: white;
 
     background-image: url(https://wallpapers.com/images/featured/dark-abstract-bsid6neh0qavpfd1.jpg);
-    height: 100dvh;
+    height: 120dvh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
     
 
     & p {
-      padding-top: 5%;
+      padding-top: 12dvh;
       padding-left: 14%;
       padding-right: 14%;
       font-size: 2rem;
@@ -67,7 +67,7 @@
     }
 
     & .bi-caret-down-fill {
-      margin-top: 15dvh;
+      margin-top: 5dvh;
       animation: anima_arrow 1s infinite alternate;
     }
   }
@@ -75,7 +75,7 @@
 
 @keyframes anima_arrow {
   100%{
-    margin-top: 18dvh;
+    margin-top: 10dvh;
   }
 }
 
@@ -115,7 +115,6 @@
   }
 }
 
-
 .text-2 {
   animation: anima_scroll_top linear;
   animation-timeline: view();
@@ -135,6 +134,12 @@ p {
   color: rgb(29, 29, 71);
 }
 
+h2 {
+  font-family: Blippo, fantasy;
+  font-size: 4rem;
+  color: rgb(10, 22, 40);
+}
+
 #support {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -144,14 +149,11 @@ p {
   margin-left: 10%;
   animation: anima_scroll_right linear;
   animation-timeline: view();
-  animation-range: entry 0%, cover 30%;
+  animation-range: entry 0%, cover 20%;
 
   & h2 {
     grid-row: 1/2;
     grid-column: 1/2;
-    font-family: Blippo, fantasy;
-    font-size: 4rem;
-    color: rgb(10, 22, 40);
   }
 
   & p {
@@ -179,16 +181,13 @@ p {
   margin-right: 10%;
   animation: anima_scroll_left linear;
   animation-timeline: view();
-  animation-range: entry 0%, cover 30%;
+  animation-range: entry 0%, cover 20%;
 
   & h2 {
     grid-row: 1/2;
     grid-column: 1/3;
     display: flex;
     justify-content: flex-end;
-    font-family: Blippo, fantasy;
-    font-size: 5rem;
-    color: rgb(10, 22, 40);
   }
 
   & p {
@@ -215,14 +214,11 @@ p {
   margin-left: 10%;
   animation: anima_scroll_right linear;
   animation-timeline: view();
-  animation-range: entry 0%, cover 30%;
+  animation-range: entry 0%, cover 20%;
 
   & h2 {
     grid-row: 1/2;
     grid-column: 1/3;
-    font-family: Blippo, fantasy;
-    font-size: 5rem;
-    color: rgb(10, 22, 40);
   }
 
   & p {
@@ -245,4 +241,69 @@ p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 3dvh;
+}
+
+@media(max-height: 768px){
+  .navbar{
+    margin-top: 14dvh;
+  }
+
+  .navbar ul li a {
+    font-size: 1.3rem;
+  }
+
+  .content{
+    row-gap: 15dvh;
+    
+    & .wellcome-text {
+      padding-top: 43dvh;
+      
+    & p {
+      padding-top: 8dvh;
+      font-size: 1.2rem;
+    }
+
+    & h1 {
+    font-size: 4rem;
+    }
+
+    & .bi-caret-down-fill {
+      margin-top: 5dvh;
+      }
+    }
+  }
+
+  .text-2 {
+    & h1 {
+      font-size: 4rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 4dvh;
+  }
+
+  h2 {
+    font-family: Blippo, fantasy;
+    font-size: 3rem;
+    color: rgb(10, 22, 40);
+  }
+
+  #support {
+    animation-range: entry 0%, cover 5%;
+  }
+
+  #union {
+    animation-range: entry 0%, cover 5%;
+  }
+
+  #solutions {
+    animation-range: entry 0%, cover 5%;
+  }
+
+  .end {
+    font-size: 1.1rem;
+    line-height: 3.7dvh;
+  }
 }

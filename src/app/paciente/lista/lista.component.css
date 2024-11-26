@@ -30,7 +30,8 @@
   z-index: 1000;
   overflow: auto;
   max-height: calc(100vh - 80px);
-  margin-top: 0.5%;
+  margin-top: 2.5dvh;
+  margin-right: 54.5dvw;
 }
 
 @media(max-width:768px){

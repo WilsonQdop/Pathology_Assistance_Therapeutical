@@ -1,8 +1,10 @@
 /* Estilos gerais para o header */
 header {
-  background-color: #265468; /* Cor de fundo suave */
-  padding: 0.1% 1%; /* Espaçamento interno */
-  position: relative;
+  background-color: rgb(92, 92, 92);
+  padding: 0.1% 1%;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  width: 100%;
 }
 
 /* Estilos para o nav */
@@ -32,8 +34,9 @@ nav {
 .brand-name {
   font-size: 1.5em; /* Tamanho do texto do nome da marca */
   font-weight: bold; /* Negrito para destacar o nome */
-  color: white; /* Cor do texto */
+  color: rgb(255, 255, 255); /* Cor do texto */
   text-decoration: none; /* Remove o sublinhado do link */
+  padding-top: 1dvh;
 }
 
 .brand-description {
