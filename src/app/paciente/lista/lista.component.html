@@ -19,7 +19,11 @@
                 <th class="text-center">Ordem</th>
                 <th class="text-center">Código PIN</th>
                 <th class="text-center">Paciente</th>
+                <th class="text-center">CPF</th>
                 <th class="text-center">Email</th>
+                <th class="text-center">Celular</th>
+                <th class="text-center">Cidade</th>
+                <th class="text-center">Estado</th>
                 <th>Ações</th>
               </tr>
             </thead>
@@ -30,12 +34,26 @@
                 <td class="text-center">
                   <div *ngIf="!item.isEditing">{{ item.nome }}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.nome" class="form-control" />
-                  <div *ngIf="!item.isEditing">{{ item.celular }}</div>
-                  <input *ngIf="item.isEditing" [(ngModel)]="item.celular" class="form-control" />
+                </td>
+                <td>
+                  <div *ngIf="!item.isEditing">{{ item.cpf }}</div>
+                  <input *ngIf="item.isEditing" [(ngModel)]="item.cpf" class="form-control" />
                 </td>
                 <td>
                   <div *ngIf="!item.isEditing">{{ item.email }}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.email" class="form-control" />
+                </td>
+                <td>
+                  <div *ngIf="!item.isEditing">{{item.celular}}</div>
+                  <input *ngIf="item.isEditing" [(ngModel)]="item.celular" class="form-control" />
+                </td>
+                <td>
+                  <div *ngIf="!item.isEditing">{{item.cidade}}</div>
+                  <input *ngIf="item.isEditing" [(ngModel)]="item.cidade" class="form-control" />
+                </td>
+                <td>
+                  <div *ngIf="!item.isEditing">{{ item.estado }}</div>
+                  <input *ngIf="item.isEditing" [(ngModel)]="item.estado" class="form-control" />
                 </td>
                 <td >
                   <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent me-2" aria-label="Editar paciente">

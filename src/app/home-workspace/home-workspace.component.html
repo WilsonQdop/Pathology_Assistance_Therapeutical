@@ -1,4 +1,4 @@
-<div>
+<div class="cardSuperior">
     <div *ngIf="showCards" class="cardPaciente">
         <p class="wellcome">Bem vindo {{usuario}}</p>
         <div class="proxPaciente">
@@ -10,18 +10,22 @@
                     <p><strong>Hora:</strong> {{horaProxPaciente}}</p>
                     <a (click)="showPaciente()" class="expandir"><img class="mais" src="mais.png"></a>
                 </div>
-            </div>
-            
+            </div> 
         </div>
-
     </div>
+
+    <div class="cardTotalPacientes">
+        
+    </div>
+</div>
+
+<div class="cardCentral" *ngIf="showCards">
+     <app-resumo-dia></app-resumo-dia>
 </div>
 
 <!-- Expansão do card ao clicar no botão de expandir -->
 
 <div *ngIf="showPacienteWorkspace"   class="paciente">
-
-
     <div class="menuEsquerdo">
 
         <div class="fotoDados">

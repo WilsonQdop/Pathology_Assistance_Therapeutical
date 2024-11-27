@@ -12,7 +12,7 @@
         </aside>
         <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
         <app-tabela *ngIf="showCadastro" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
-        <app-lista *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+        <app-lista class="lista" *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
 
     </div>
 </div>

@@ -1,0 +1,17 @@
+<div class="consultas">
+    <h5>Próximas consultas:</h5>
+    <div class="titulo">
+        <span class="data">Data</span>
+        <span class="hora">Hora</span>
+        <span class="paciente">Nome do Paciente</span>
+        <span class="status">Status</span>
+    </div>
+    <ul>
+        <li *ngFor="let consulta of atendimento">
+            <span class="data">{{ consulta.data }}</span>
+            <span class="hora">{{ consulta.hora }}</span>
+            <span class="paciente">{{ consulta.paciente }}</span>
+            <span class="status">{{ consulta.status }}</span>
+        </li>
+    </ul>
+</div>

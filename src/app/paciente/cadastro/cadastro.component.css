@@ -1,3 +1,4 @@
+
 .sidebar {
     background-color: white;
     width: 250px;
@@ -66,6 +67,8 @@
     background-repeat: no-repeat;
     background-size: cover; */
   }
+
+
 
 
   @media (max-width: 768px){
