@@ -28,7 +28,7 @@
 }
 
 .top p {
-  font-size: 0.8rem; /* Ajuste o tamanho da fonte para o parágrafo (60% de 0.8rem) */
+  font-size: 1rem; /* Ajuste o tamanho da fonte para o parágrafo (60% de 0.8rem) */
   margin: 0; /* Remove margens adicionais, se necessário */
 }
 
@@ -47,11 +47,11 @@ form {
 }
 
 label {
-  font-size: 0.9rem; /* Tamanho da fonte dos rótulos (60% de 1rem) */
+  font-size: 1rem; /* Tamanho da fonte dos rótulos (60% de 1rem) */
 }
 
 input, textarea {
-  font-size: 0.7rem; /* Tamanho da fonte dos campos de entrada (60% de 1rem) */
+  font-size: 0.9rem; /* Tamanho da fonte dos campos de entrada (60% de 1rem) */
   padding: 0.3rem; /* Padding interno dos campos (60% de 0.5rem) */
   width: 100%; /* Faz os campos ocuparem toda a largura disponível */
 }
@@ -84,9 +84,30 @@ input, textarea {
 .btn-success{
   background-color: #265468; /* Cor ao passar o mouse */
   border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
+  width: 7dvw;
+  height: 4dvh;
+  font-size: 1rem;
 }
+
+.btn-secondary{
+  width: 7dvw;
+  height: 4dvh;
+  font-size: 1rem;
+}
+
 .btn-success:hover{
   background-color: #5f8f9c; /* Cor ao passar o mouse */
   border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
 }
 
+@media(max-width: 768px){
+  .btn-success{
+    width: 17dvw;
+    height: 5dvh;
+  }
+  
+  .btn-secondary{
+    width: 17dvw;
+    height: 5dvh;
+  }
+}

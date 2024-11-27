@@ -1,6 +1,6 @@
 <div>
     <div *ngIf="showCards" class="cardPaciente">
-        <p>Bem vindo {{usuario}}</p>
+        <p class="wellcome">Bem vindo {{usuario}}</p>
         <div class="proxPaciente">
             <div class="infoPaciente">
                 <h5>Próximo Paciente</h5>
@@ -26,7 +26,7 @@
 
         <div class="fotoDados">
             <div class="fotoPerfil">
-                <img id="fotoPerfil" src="https://files.oaiusercontent.com/file-D165av37ENgTCAGhQUPAs2?se=2024-11-25T19%3A03%3A20Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Deaf603b1-52b4-4e41-a73a-d92c40df5b5b.webp&sig=l6D/QfD72QL8sKOC2Mgwqr2t%2BR6kOEzLMf5/qbgTSdY%3D" alt="foto Paciente">
+                <img id="fotoPerfil" src="img-paciente.png" alt="foto Paciente">
             </div>
             <div class="informacoesPrincipais">
                 <p><strong>Nome:</strong> {{proxPaciente}}</p>
@@ -56,21 +56,19 @@
             </ul>
         </div>
 
-        <!-- <div class="consultas">
-            <div class="titulo">
-                <h3>Exames de Sangue:</h3>
-                <span><img class="uploadIcon" src="upload.png" alt=""></span>
-            
+        <div class="consultaHipocrates">
+            <h6>Deseja um resumo do paciente?</h6>
+            <div class="cardHipocrates">
+                <img class="image-hipocrates" src="image-hipocrates.png" alt="">
+
+                <div class="labelHipocrates">
+                    <strong>Pergunte ao Hipócrates:</strong>
+                    <textarea class="txt-area-hipocrates" name="text" id="textHipocrates"></textarea>
+                </div>
+                <a href="botaoEnviar"><img id="botaoEnviar" src="enviar.png" alt="botão enviar"></a>
             </div>
-            <ul>
-            <li *ngFor="let consulta of ultimasConsultas">
-                <span class="data">{{ consulta.data }}</span>
-                <span class="hora">{{ consulta.hora }}</span>
-                <span class="paciente">{{ consulta.paciente }}</span>
-                <span><img class="uploadIcon" src="download.png" alt=""></span>
-            </li>
-            </ul>
-        </div> -->
+        </div>
+
     </div>
 
     <div class="menuDireito">
@@ -116,7 +114,22 @@
             </div>
 
             <div *ngIf="showExames" class="exames">
-                Exames Realizados
+
+                <div class="consultas">
+                    <div class="titulo">
+                        <h3>Exames de Sangue:</h3>
+                        <span><img class="uploadIcon" src="upload.png" alt=""></span>
+                    
+                    </div>
+                    <ul>
+                    <li *ngFor="let consulta of ultimasConsultas">
+                        <span class="data">{{ consulta.data }}</span>
+                        <span class="hora">{{ consulta.hora }}</span>
+                        <span class="paciente">{{ consulta.paciente }}</span>
+                        <span><img class="uploadIcon" src="download.png" alt=""></span>
+                    </li>
+                    </ul>
+                </div>
             </div>
 
             <div *ngIf="showExamesLab" class="examesLab">

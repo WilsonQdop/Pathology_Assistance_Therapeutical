@@ -1,9 +1,10 @@
 .sidebar {
     background-color: white;
     width: 250px;
-    max-height: 90%;
     padding: 20px;
-    margin-top: 6.8dvh;
+    margin-top: 20dvh;
+    margin-left: 2.5dvw;
+    margin-right: 2.5dvw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;/* Distribui os itens com espaço igual ao redor */
@@ -27,7 +28,8 @@
   }
   
   .sidebar li {
-    padding: 10px;
+    width: 204px;
+    padding: 25px;
     cursor: pointer;
     border-bottom: 1px solid #ddd; /* Linha separando os itens */
     transition: background-color 0.3s;

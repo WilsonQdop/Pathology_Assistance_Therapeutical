@@ -2,7 +2,7 @@
 header {
   background-color: rgb(92, 92, 92);
   padding: 0.1% 1%;
-  position: absolute;
+  position: relative;
   backdrop-filter: blur(10px);
   width: 100%;
 }

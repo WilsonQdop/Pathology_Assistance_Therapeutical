@@ -6,14 +6,14 @@
 
 
 
-<form *ngIf="formVisible" [formGroup]="employeeForm" (ngSubmit)="onSave()" class="p-3 border rounded" style="max-width: 70dvh; margin-top: 10dvh;">
+<form *ngIf="formVisible" [formGroup]="employeeForm" (ngSubmit)="onSave()" class="p-3 border rounded" style="max-width: 70dvh; margin-top: 2dvh;">
   <div class="top">
     <div class="imagem">
       <img src="image.png" alt="Imagem">
     </div>
     <div class="informations">
       <h3>Cadastre seu paciente</h3>
-      <p>Aqui você pode digitar as informações do seu paciente.</p>
+      <p>Aqui você pode digitar as informações do seu paciente</p>
     </div>
   </div>
 
@@ -73,7 +73,7 @@
       <button type="reset" class="btn btn-secondary ">Reiniciar</button>
     </div>
     <div class="col-6 text-center">
-      <button type="submit" class="btn btn-success ">Salvar Paciente</button>
+      <button type="submit" class="btn btn-success ">Salvar</button>
     </div>
   </div>
 </form>
