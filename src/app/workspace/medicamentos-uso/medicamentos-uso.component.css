@@ -12,7 +12,7 @@
 
 .consultas .titulo {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     font-weight: bold;
     font-size: 1rem;
     background-color: #e9ecef;
@@ -30,7 +30,7 @@
 
 .consultas li {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     align-items: center; /* Centraliza verticalmente */
     justify-items: center; /* Centraliza horizontalmente */
     padding: 10px 15px;
@@ -63,3 +63,11 @@
 .paciente, .status {
     color: #212529;
 }
+
+.sessao {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ced4da;
+    padding-bottom: 5px;
+    color: #6c757d;
+}
+

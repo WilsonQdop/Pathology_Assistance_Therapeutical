@@ -12,12 +12,15 @@ import { FormsModule } from '@angular/forms';
 export class ListaVacinasComponent {
 
   vacinas = [
-    { vacina: 'Hepatite B', data: '17/12/2024', status: 'Confirmada' },
-    { vacina: 'Tétano e difteria (dT)', data: '17/12/2024', status: 'Pendente' },
+    { vacina: 'Hepatite B', data: '10/09/2005', status: '3º Dose' },
+    { vacina: 'Hepatite B', data: '17/04/2005', status: '2º Dose' },
+    { vacina: 'Hepatite B', data: '17/03/2005', status: '1º Dose' },
+    { vacina: 'Tétano e difteria (dT)', data: '17/12/2024', status: 'Reforço' },
     { vacina: 'Influenza', data: '17/12/2024', status: 'Pendente' },
-    { vacina: 'COVID-19', data: '17/12/2024', status: 'Confirmada' },
-    { vacina: 'Febre Amarela', data: '17/12/2024', status: 'Pendente' },
-    { vacina: 'Pneumocócica 23', data: '17/12/2024', status: 'Confirmada' },
+    { vacina: 'COVID-19', data: '17/12/2024', status: '3º Dose' },
+    { vacina: 'COVID-19', data: '17/12/2024', status: '2º Dose' },
+    { vacina: 'COVID-19', data: '17/12/2024', status: '1º Dose' },
+    { vacina: 'Febre Amarela', data: '17/12/2024', status: 'Dose única' },
   ];
 
 }

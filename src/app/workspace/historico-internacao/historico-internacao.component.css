@@ -63,3 +63,13 @@
 .paciente, .status {
     color: #212529;
 }
+
+.sessao {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ced4da;
+    padding-bottom: 5px;
+    color: #6c757d;
+}
+
+
+
