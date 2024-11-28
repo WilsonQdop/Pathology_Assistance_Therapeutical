@@ -5,6 +5,7 @@ import { CadastrousuarioComponent } from './usuario/cadastrousuario/cadastrousua
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { WorkspacePageComponent } from './pages/workspace-page/workspace-page.component';
 import { ChatHipocratesComponent } from './chat-hipocrates/chat-hipocrates.component';
+import { DesenvolvedoresComponent } from './desenvolvedores/desenvolvedores.component';
 
 
 export const routes: Routes = [ 
@@ -14,6 +15,7 @@ export const routes: Routes = [
     {path: "perfil", component: UserProfileComponent},
     {path: "workspace", component: WorkspacePageComponent},
     {path: "hipo", component: ChatHipocratesComponent},   
+    {path: "desenvolvedores", component: DesenvolvedoresComponent},
 
 ];
 
