@@ -4,8 +4,6 @@
     width: 250px;
     padding: 20px;
     margin-top: 20dvh;
-    margin-left: 2.5dvw;
-    margin-right: 2.5dvw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;/* Distribui os itens com espaço igual ao redor */

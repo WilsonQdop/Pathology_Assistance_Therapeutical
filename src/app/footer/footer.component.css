@@ -1,11 +1,12 @@
 .footer {
   position: fixed;
+  backdrop-filter: blur(5px);
   bottom: 0;
   width: 100%;
 }
 
 .footer-button {
-  background-color: #B0B0B0;
+  background-color: #0000006b;
   color: white;
   padding: 10px;
   text-align: center;

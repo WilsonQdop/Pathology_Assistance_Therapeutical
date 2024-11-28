@@ -20,7 +20,7 @@
 </div>
 
 <div class="cardCentral" *ngIf="showCards">
-     <app-resumo-dia></app-resumo-dia>
+    <app-resumo-dia></app-resumo-dia>
 </div>
 
 <!-- Expansão do card ao clicar no botão de expandir -->
@@ -102,16 +102,19 @@
 
 
             <div *ngIf="showInfo"  class="informacoesAdicionais">
-                
+
                 <h5 class="titulo">Informações adicionais</h5>
+                <div class="grid-info">
                 <p><strong>data de nascimento: </strong>12/10/1997</p>
-                <p><strong>Profissão: </strong>Analista de Sistemas</p>
-                <p><strong>Escolaridade: </strong>Superior Completo</p>
-                <p><strong>Estado Civil: </strong>Solteiro</p>
                 <p><strong>Nome da mãe: </strong>Joana da Silva</p>
+                <p><strong>Escolaridade: </strong>Superior Completo</p>
                 <p><strong>Nome do pai: </strong>João da Silva</p>
+                <p><strong>Profissão: </strong>Analista de Sistemas</p>
                 <p><strong>Religião: </strong>Católico</p>
-     
+                <p><strong>Estado Civil: </strong>Solteiro</p> 
+
+                </div>
+
             </div>
 
             <div *ngIf="showInfo" class="endereco">

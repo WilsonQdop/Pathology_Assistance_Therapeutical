@@ -159,9 +159,8 @@
   .abas-container {
     display: flex;
     flex-wrap: wrap;
-
+    max-width: 100%;
     border-radius: 8px 8px 0 0;
-    border-bottom: 2px solid #ccc;
     margin-bottom: 0;
   }
   
@@ -277,7 +276,7 @@
     .abasContent{
       background-color: aqua;
       height: 74dvh;
-      width: 62dvw;
+      width: 59dvw;
       background-color: #f8f9fa;
       padding: 20px;
       border-radius: 8px;
@@ -302,3 +301,9 @@
       
     }
 
+    .grid-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      align-items: start;
+    }

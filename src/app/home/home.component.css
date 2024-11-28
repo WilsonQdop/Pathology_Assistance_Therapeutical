@@ -42,7 +42,7 @@
     height: 100%;
     color: white;
 
-    background-image: url(https://wallpapers.com/images/featured/dark-abstract-bsid6neh0qavpfd1.jpg);
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/006/713/084/small_2x/abstract-health-science-consist-doctor-digital-technology-concept-modern-medical-technology-treatment-medicine-on-hi-tech-future-blue-background-for-template-web-design-or-presentation-vector.jpg);
     height: 120dvh;
     background-attachment: fixed;
     background-position: center;
@@ -67,7 +67,7 @@
     }
 
     & .bi-caret-down-fill {
-      margin-top: 5dvh;
+      margin-top: 9dvh;
       animation: anima_arrow 1s infinite alternate;
     }
   }
@@ -75,7 +75,7 @@
 
 @keyframes anima_arrow {
   100%{
-    margin-top: 10dvh;
+    margin-top: 13dvh;
   }
 }
 
@@ -245,7 +245,7 @@ h2 {
 
 @media(max-height: 768px){
   .navbar{
-    margin-top: 14dvh;
+    margin-top: 1dvh;
   }
 
   .navbar ul li a {
@@ -255,8 +255,9 @@ h2 {
   .content{
     row-gap: 15dvh;
     
+    
     & .wellcome-text {
-      padding-top: 43dvh;
+      padding-top: 30dvh;
       
     & p {
       padding-top: 8dvh;
@@ -268,7 +269,7 @@ h2 {
     }
 
     & .bi-caret-down-fill {
-      margin-top: 5dvh;
+      margin-top: 10dvh;
       }
     }
   }

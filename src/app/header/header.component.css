@@ -1,9 +1,9 @@
 /* Estilos gerais para o header */
 header {
-  background-color: rgb(92, 92, 92);
+  background-color: #0000006b;
   padding: 0.1% 1%;
   position: relative;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   width: 100%;
 }
 
@@ -21,18 +21,19 @@ nav {
 }
 
 .logo img {
-  width: 10%; /* Largura da imagem da logo */
+  width: 6%; /* Largura da imagem da logo */
   height: auto; /* Mantém a proporção da imagem */
   margin-right: 10px; /* Espaçamento à direita da imagem */
 }
 
 .brand {
+  height: 6.5dvh;
   display: flex;
   flex-direction: column; /* Organiza o nome e descrição em coluna */
 }
 
 .brand-name {
-  font-size: 1.5em; /* Tamanho do texto do nome da marca */
+  font-size: 1.3em; /* Tamanho do texto do nome da marca */
   font-weight: bold; /* Negrito para destacar o nome */
   color: rgb(255, 255, 255); /* Cor do texto */
   text-decoration: none; /* Remove o sublinhado do link */
@@ -40,7 +41,7 @@ nav {
 }
 
 .brand-description {
-  font-size: 0.9em; /* Tamanho da descrição */
+  font-size: 0.8em; /* Tamanho da descrição */
   color: white; /* Cor cinza para a descrição */
 }
 

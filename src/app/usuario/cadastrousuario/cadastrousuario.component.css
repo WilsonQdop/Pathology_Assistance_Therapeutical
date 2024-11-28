@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+img{
+  width: 99dvw;
+  height: 100dvh;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
