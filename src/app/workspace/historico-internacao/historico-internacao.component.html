@@ -1,0 +1,25 @@
+
+<div class="consultas">
+    <div class="titulo">
+        <span class="cod">Cod</span>
+        <span class="medico">Tipo</span>
+        <span class="status">R. Médico</span>
+        <span class="status">Data Entrada</span>
+        <span class="status">Data Saída</span>
+    </div>
+    <ul>
+        <li *ngFor="let consulta of internacao">
+            <span class="cod">{{ consulta.cod }}</span>
+            <span class="data">{{ consulta.tipo }}</span>
+            <span class="status">{{ consulta.responsavel }}</span>
+            <span class="status">{{ consulta.dataEntrada }}</span>
+            <span class="status">{{ consulta.dataSaida }}</span>
+
+
+
+
+        </li>
+    </ul>
+</div>
+
+

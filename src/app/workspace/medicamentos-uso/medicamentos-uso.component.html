@@ -1,0 +1,15 @@
+<div class="consultas">
+    <div class="titulo">
+        <span class="data">Nome</span>
+        <span class="paciente">Concentração</span>
+        <span class="status">Periodicidade</span>
+    </div>
+    <ul>
+        <li *ngFor="let consulta of remedios">
+            <span class="data">{{ consulta.nome }}</span>
+            <span class="paciente">{{ consulta.concentracao }}</span>
+            <span class="status">{{ consulta.periodicidade }}</span>
+        </li>
+    </ul>
+</div>
+

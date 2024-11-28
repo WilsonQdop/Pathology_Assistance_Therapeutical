@@ -1,0 +1,22 @@
+
+<div class="consultas">
+    <div class="titulo">
+        <span class="cod">Cod</span>
+        <span class="data">Data</span>
+        <span class="paciente">Paciente</span>
+        <span class="medico">Tipo</span>
+        <span class="status">R. Médico</span>
+    </div>
+    <ul>
+        <li *ngFor="let consulta of cirurgias">
+            <span class="cod">{{ consulta.cod }}</span>
+            <span class="data">{{ consulta.data }}</span>
+            <span class="paciente">{{ consulta.nome }}</span>
+            <span class="status">{{ consulta.tipo }}</span>
+            <span class="status">{{ consulta.responsavel }}</span>
+
+
+        </li>
+    </ul>
+</div>
+

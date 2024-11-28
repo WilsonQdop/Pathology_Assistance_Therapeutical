@@ -1,0 +1,65 @@
+.consultas {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100dvw;
+    max-height: 100dvh;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    color: #343a40;
+}
+
+.consultas .titulo {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 2fr 0.5fr;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+.consultas ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.consultas li {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 2fr 0.5fr;
+    align-items: center; /* Centraliza verticalmente */
+    justify-items: center; /* Centraliza horizontalmente */
+    padding: 10px 15px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centraliza o texto */
+}
+
+.consultas li:hover {
+    background-color: #dee2e6;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.consultas li span {
+    padding: 0 10px;
+    text-align: center;
+}
+
+.data {
+    font-weight: bold;
+}
+
+.hora {
+    color: #495057;
+}
+
+.paciente, .status {
+    color: #212529;
+}

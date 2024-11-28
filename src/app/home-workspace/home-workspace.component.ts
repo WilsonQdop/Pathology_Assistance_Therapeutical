@@ -2,12 +2,20 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ResumoDiaComponent } from '../resumo-dia/resumo-dia.component';
+import { ResumoDiaComponent } from '../workspace/resumo-dia/resumo-dia.component';
+import { ListaVacinasComponent } from '../workspace/lista-vacinas/lista-vacinas.component';
+import { MedicamentosUsoComponent } from '../workspace/medicamentos-uso/medicamentos-uso.component';
+import { HistoricoCirurgiasComponent } from '../workspace/historico-cirurgias/historico-cirurgias.component';
+import { DiagnosticoPrevioComponent } from '../workspace/diagnostico-previo/diagnostico-previo.component';
+import { HistoricoInternacaoComponent } from '../workspace/historico-internacao/historico-internacao.component';
+import { ExamesRealizadosComponent } from '../workspace/exames-realizados/exames-realizados.component';
+import { ExamesPeriodicosComponent } from '../workspace/exames-periodicos/exames-periodicos.component';
+import { AnaliseHipocratesComponent } from '../workspace/analise-hipocrates/analise-hipocrates.component';
 
 @Component({
   selector: 'app-home-workspace',
   standalone: true,
-  imports: [CommonModule, FormsModule, ResumoDiaComponent],
+  imports: [CommonModule, FormsModule, ResumoDiaComponent, ListaVacinasComponent, MedicamentosUsoComponent, HistoricoCirurgiasComponent,DiagnosticoPrevioComponent, HistoricoInternacaoComponent, ExamesRealizadosComponent,ExamesPeriodicosComponent, AnaliseHipocratesComponent],
   templateUrl: './home-workspace.component.html',
   styleUrl: './home-workspace.component.css'
 })

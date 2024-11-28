@@ -33,12 +33,12 @@
                 <img id="fotoPerfil" src="img-paciente.png" alt="foto Paciente">
             </div>
             <div class="informacoesPrincipais">
-                <p><strong>Nome:</strong> {{proxPaciente}}</p>
-                <p><strong>Cpf:</strong> 567.678.456-82</p>
-                <p><strong>Rg:</strong> 9119654</p>
-                <p><strong>Idade:</strong>27</p>
-                <p><strong>Sexo:</strong>M</p>
-                <p><strong>Tipo Sanguíneo:</strong> A+</p>
+                <p><strong>Nome: </strong> {{proxPaciente}}</p>
+                <p><strong>Cpf: </strong> 567.678.456-82</p>
+                <p><strong>Rg: </strong> 9119654</p>
+                <p><strong>Idade: </strong>27</p>
+                <p><strong>Sexo: </strong>M</p>
+                <p><strong>Tipo Sanguíneo: </strong> A+</p>
             </div>
         </div>
 
@@ -87,57 +87,69 @@
 
 
         <div class="abasContent">
+            
+        
+
+            
+            
             <div *ngIf="showInfo" class="informacoesDetalhadas">
-                <h5>Dados para contato</h5>
-                <p><strong>Endereço: </strong>Rua da Catuaba, 147</p>
+                <h5 class="titulo">Dados para contato</h5>
                 <p><strong>Email: </strong>{{email}}</p>
                 <p><strong>Celular: </strong>(81) 98765-4321</p>
                 <p><strong>Telefone: </strong>(81) 3456-1234</p>
                 <p><strong>Nº Cartão SUS: </strong>123</p>
             </div>
 
+
+            <div *ngIf="showInfo"  class="informacoesAdicionais">
+                
+                <h5 class="titulo">Informações adicionais</h5>
+                <p><strong>data de nascimento: </strong>12/10/1997</p>
+                <p><strong>Profissão: </strong>Analista de Sistemas</p>
+                <p><strong>Escolaridade: </strong>Superior Completo</p>
+                <p><strong>Estado Civil: </strong>Solteiro</p>
+                <p><strong>Nome da mãe: </strong>Joana da Silva</p>
+                <p><strong>Nome do pai: </strong>João da Silva</p>
+                <p><strong>Religião: </strong>Católico</p>
+     
+            </div>
+
+            <div *ngIf="showInfo" class="endereco">
+                <h5 class="titulo">Endereço</h5>
+                <p><strong>Endereço: </strong>Av. Conselheiro Aguiar, 77</p>
+                <p><strong>Bairro: </strong>Boa Viagem</p>
+                <p><strong>Cidade: </strong>Recife</p>
+                <p><strong>Estado: </strong>PE</p>
+            </div>
+
             <div *ngIf="showMedicamentos" class="medicamentos">
-                Dipirona
+                <app-medicamentos-uso></app-medicamentos-uso>
             </div>
 
 
             <div *ngIf="showCirurgias" class="historicoCirurgia">
-                Cirurgias
+                <app-historico-cirurgias></app-historico-cirurgias>
             </div>
 
             <div *ngIf="showVacinas" class="vacinas">
-                Vacinas
+                <app-lista-vacinas></app-lista-vacinas>
             </div>
 
             <div *ngIf="showDiagnostico" class="diagnostico">
-                Diagnostico
+                <app-diagnostico-previo></app-diagnostico-previo>
             </div>
 
             <div *ngIf="showHistorico" class="historicoIntern">
-                internações
+                <app-historico-internacao></app-historico-internacao>
             </div>
 
             <div *ngIf="showExames" class="exames">
-
-                <div class="consultas">
-                    <div class="titulo">
-                        <h3>Exames de Sangue:</h3>
-                        <span><img class="uploadIcon" src="upload.png" alt=""></span>
-                    
-                    </div>
-                    <ul>
-                    <li *ngFor="let consulta of ultimasConsultas">
-                        <span class="data">{{ consulta.data }}</span>
-                        <span class="hora">{{ consulta.hora }}</span>
-                        <span class="paciente">{{ consulta.paciente }}</span>
-                        <span><img class="uploadIcon" src="download.png" alt=""></span>
-                    </li>
-                    </ul>
-                </div>
+                <app-exames-realizados></app-exames-realizados>
             </div>
 
             <div *ngIf="showExamesLab" class="examesLab">
-                Exames Laboratoriais
+                <app-exames-periodicos></app-exames-periodicos>
+                <app-analise-hipocrates></app-analise-hipocrates>
             </div>
 
     </div>

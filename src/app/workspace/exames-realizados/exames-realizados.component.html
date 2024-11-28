@@ -1,0 +1,23 @@
+
+<div class="consultas">
+    <h5>Exames realizados:</h5>
+    <div class="titulo">
+        <span class="cod">Cod</span>
+        <span class="medico">Tipo</span>
+        <span class="status">Data</span>
+
+    </div>
+    <ul>
+        <li *ngFor="let consulta of exames">
+            <span class="cod">{{ consulta.cod }}</span>
+            <span class="data">{{ consulta.tipo }}</span>
+            <span class="status">{{ consulta.data}}</span>
+
+
+
+
+        </li>
+    </ul>
+</div>
+
+
