@@ -13,10 +13,12 @@
             </div> 
         </div>
     </div>
-
-    <div (click)="toggleChat()" class="hipocratesCard">
-        <h5 class="titulo">Acesse o Hipócrates</h5>
-        <img id="imagemCard" src="image-hipocrates.png" alt="">
+    <div *ngIf="showCards" (click)="toggleChat()" class="hipocratesCard"> 
+        <div class="dadosCard">
+            <h5 class="titulo">Acesse o Hipócrates</h5>
+            <img id="imagemCard" src="image-hipocrates.png" alt="">
+            
+        </div>
     </div>
 </div>
 
@@ -130,7 +132,7 @@
             </div>
             
             
-           
+          
             <div *ngIf="showMedicamentos" class="medicamentos">
                 <app-medicamentos-uso></app-medicamentos-uso>
             </div>
@@ -160,8 +162,8 @@
                 <app-exames-periodicos></app-exames-periodicos>
                 <app-analise-hipocrates></app-analise-hipocrates>
             </div>
+        </div>
 
-    </div>
 
 </div>
 

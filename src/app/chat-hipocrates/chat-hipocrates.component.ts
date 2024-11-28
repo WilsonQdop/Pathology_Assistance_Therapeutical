@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+  
 
 @Component({
   selector: 'app-chat-hipocrates',
@@ -85,5 +86,8 @@ export class ChatHipocratesComponent {
         this.activeChatIndex = -1; // Nenhum chat ativo
       }
     }
+  }
+  returnHipo() {
+   
   }
 }

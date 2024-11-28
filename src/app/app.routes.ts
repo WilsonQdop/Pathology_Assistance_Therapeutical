@@ -13,14 +13,7 @@ export const routes: Routes = [
     {path: "cadastro", component: CadastrousuarioComponent},
     {path: "perfil", component: UserProfileComponent},
     {path: "workspace", component: WorkspacePageComponent},
-    {path: "hipo", component: ChatHipocratesComponent},
-
-
-
-
-
-
-    
+    {path: "hipo", component: ChatHipocratesComponent},   
 
 ];
 

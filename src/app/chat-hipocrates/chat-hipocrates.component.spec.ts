@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChatHipocratesComponent } from './chat-hipocrates.component';
+import { HomeWorkspaceComponent } from '../home-workspace/home-workspace.component';
 
 describe('ChatHipocratesComponent', () => {
   let component: ChatHipocratesComponent;
@@ -8,7 +9,7 @@ describe('ChatHipocratesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChatHipocratesComponent]
+      imports: [ChatHipocratesComponent, HomeWorkspaceComponent]
     })
     .compileComponents();
 
