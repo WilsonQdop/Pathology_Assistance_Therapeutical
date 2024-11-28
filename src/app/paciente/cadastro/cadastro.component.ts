@@ -6,6 +6,7 @@ import { AuthService } from '../../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { LoginMessageComponent } from '../../login-message/login-message.component';
 import { HomeWorkspaceComponent } from '../../home-workspace/home-workspace.component';
+import { ChatHipocratesComponent } from '../../chat-hipocrates/chat-hipocrates.component';
 
 
 
@@ -13,7 +14,7 @@ import { HomeWorkspaceComponent } from '../../home-workspace/home-workspace.comp
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent, CommonModule,HomeWorkspaceComponent],
+  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent, CommonModule,HomeWorkspaceComponent, ChatHipocratesComponent],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
@@ -76,6 +77,7 @@ export class CadastroComponent {
   showDashboard: boolean = false;
   showSuporte: boolean = false;
   showPacienteWorkspace: boolean = false;
+  chatOn: boolean = false;
 
 
   onPacienteCadastrado(paciente: any) {
@@ -90,6 +92,10 @@ export class CadastroComponent {
 
     this.authService.getUsernameObservable().subscribe((username: string | null) => {
       this.username = username || '';
+    });
+
+    this.authService.getChatStatusObservable().subscribe((status: boolean) => {
+      this.chatOn = status;
     });
 
   }

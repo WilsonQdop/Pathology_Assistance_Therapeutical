@@ -1,20 +1,26 @@
 
 <div *ngIf="isUserLogged;else userLogged">
-    <div class="main">
-        <aside class="sidebar">
-            <ul>
-                <li (click)="toggleHomeWorkspace()"> Home Workspace</li>
-                <li (click)="togglePacientes()">Meus Pacientes</li>           
-                <li (click)="toggleCadastro()">Cadastrar Pacientes</li>                    
-                <li (click)="toggleDashboard()">Dashboards</li>
-                <li (click)="toggleSuporte()">Suporte</li>
-            </ul>
-        </aside>
-        <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
-        <app-tabela *ngIf="showCadastro" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
-        <app-lista class="lista" *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
-
+    <div *ngIf="!chatOn;else chatMode">
+        <div class="main">
+            <aside class="sidebar">
+                <ul>
+                    <li (click)="toggleHomeWorkspace()"> Home Workspace</li>
+                    <li (click)="togglePacientes()">Meus Pacientes</li>           
+                    <li (click)="toggleCadastro()">Cadastrar Pacientes</li>                    
+                    <li (click)="toggleDashboard()">Dashboards</li>
+                    <li (click)="toggleSuporte()">Suporte</li>
+                </ul>
+            </aside>
+            <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
+            <app-tabela *ngIf="showCadastro" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
+            <app-lista class="lista" *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+        </div>
     </div>
+    
+    <ng-template #chatMode>
+        <app-chat-hipocrates></app-chat-hipocrates>
+    </ng-template>
+
 </div>
 
 <ng-template #userLogged>

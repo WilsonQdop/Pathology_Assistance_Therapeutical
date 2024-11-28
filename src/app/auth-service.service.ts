@@ -7,12 +7,13 @@ import { BehaviorSubject } from 'rxjs';
 export class AuthService {
   private isLoggedInSubject: BehaviorSubject<boolean>;
   private usernameSubject: BehaviorSubject<string | null>;
+  private chatOnSubject = new BehaviorSubject<boolean>(false);
+  
 
   constructor() {
     // Verifica o status de login armazenado no localStorage ao iniciar o serviço
     const storedLoginStatus = localStorage.getItem('isLoggedIn');
     const storedUsername = localStorage.getItem('username');
-
 
     this.isLoggedInSubject = new BehaviorSubject<boolean>(storedLoginStatus === 'true');
     this.usernameSubject = new BehaviorSubject<string | null>(storedUsername);
@@ -52,5 +53,22 @@ export class AuthService {
     this.usernameSubject.next(null);
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('username');
+  }
+
+  setChatStatus(status: boolean): void {
+    this.chatOnSubject.next(status);
+  }
+
+  toggleChatStatus(): void {
+    const currentStatus = this.chatOnSubject.getValue();
+    this.chatOnSubject.next(!currentStatus);
+  }
+
+  getChatStatusObservable() {
+    return this.chatOnSubject.asObservable();
+  }
+
+  getChatStatus(): boolean {
+    return this.chatOnSubject.getValue();
   }
 }

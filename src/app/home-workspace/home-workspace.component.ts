@@ -44,6 +44,7 @@ export class HomeWorkspaceComponent {
   showHistorico: boolean = false;
   showExames: boolean = false;
   showExamesLab: boolean = false;
+  chatOn: boolean = false;
 
   abaSelecionada = 'Comorbidades';
   abas = [
@@ -75,6 +76,12 @@ export class HomeWorkspaceComponent {
       this.usuario = username || '';
     });
 
+
+
+  }
+
+  toggleChat() {
+    this.authService.toggleChatStatus();
   }
 
   showPaciente() {
@@ -85,6 +92,8 @@ export class HomeWorkspaceComponent {
     this.showCards = !this.showCards;
     this.showPacienteWorkspace = false;
 }
+
+
 
   selecionarAba(aba: string) {
     this.abaSelecionada = aba;

@@ -1,0 +1,82 @@
+<div class="chat-container">
+    <!-- Barra de seleção de chats -->
+    <div class="chat-sidebar">
+      <h3>Chats</h3>
+      <ul>
+        <li
+          *ngFor="let chat of chatList; let i = index"
+          [class.active]="i === activeChatIndex"
+          (mouseenter)="hoveredChatIndex = i"
+          (mouseleave)="hoveredChatIndex = -1"
+        >
+          <div class="chat-title">
+            <span *ngIf="!chat.isEditing">{{ chat.name }}</span>
+            <input
+              *ngIf="chat.isEditing"
+              [(ngModel)]="chat.name"
+              (blur)="finishEditingChatName(i)"
+              (keydown.enter)="finishEditingChatName(i)"
+              type="text"
+              class="edit-input"
+            />
+          </div>
+          <div class="chat-actions">
+            <button
+              *ngIf="hoveredChatIndex === i && !chat.isEditing"
+              class="edit-chat-button"
+              (click)="editChatName(i)"
+            >
+              Alterar
+            </button>
+            <!-- Botão de excluir -->
+            <button
+              *ngIf="hoveredChatIndex === i && !chat.isEditing"
+              class="delete-chat-button"
+              (click)="deleteChat(i)"
+            >
+              Excluir
+            </button>
+          </div>
+        </li>
+      </ul>
+      <button class="add-chat-button" (click)="addNewChat()">+ Nova conversa</button>
+    </div>
+  
+    <!-- Área principal do chat -->
+    <div class="chat-wrapper" *ngIf="chatList.length > 0; else emptyChat">
+      <div class="chat-header">
+        <img id="hipo" src="image-hipocrates.png" alt="">
+        <h5>{{chatList[activeChatIndex].name }}</h5>
+      </div>
+  
+      <div class="chat-messages">
+        <div
+          *ngFor="let message of chatList[activeChatIndex]?.messages"
+          class="message"
+          [ngClass]="{ 'from-user': message.user }"
+        >
+          <div class="bubble">
+            <p>{{ message.text }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="chat-input">
+        <input
+          type="text"
+          placeholder="Digite sua mensagem..."
+          [(ngModel)]="newMessage"
+          (keydown.enter)="sendMessage()"
+        />
+        <button (click)="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  
+    <!-- Mensagem caso nenhum chat esteja criado -->
+    <ng-template #emptyChat>
+      <div class="empty-chat-message">
+        <p>Nenhuma conversa ativa. Clique em "Nova conversa" para começar!</p>
+      </div>
+    </ng-template>
+  </div>
+  
