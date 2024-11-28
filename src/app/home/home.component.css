@@ -42,7 +42,7 @@
     height: 100%;
     color: white;
 
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/006/713/084/small_2x/abstract-health-science-consist-doctor-digital-technology-concept-modern-medical-technology-treatment-medicine-on-hi-tech-future-blue-background-for-template-web-design-or-presentation-vector.jpg);
+    background-image: url('/dna.jpg');
     height: 120dvh;
     background-attachment: fixed;
     background-position: center;
@@ -53,9 +53,11 @@
     
 
     & p {
-      padding-top: 12dvh;
-      padding-left: 14%;
-      padding-right: 14%;
+      background-color: rgba(0, 0, 0, 0.384);
+      backdrop-filter: blur(5px);
+      padding: 2%;
+      margin: 0 13%;
+      border-radius: 2cap;
       font-size: 2rem;
       line-height: 4dvh;
       color: white;
@@ -64,6 +66,7 @@
     & h1 {
     font-family: Blippo, fantasy;
     font-size: 6rem;
+    padding-bottom: 8dvh;
     }
 
     & .bi-caret-down-fill {
