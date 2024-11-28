@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class DesenvolvedoresComponent {
   developers = [
-    { name: 'João Paulo',  photo: 'Jotta.jpg'},
-    { name: 'Gustavo Andrews', photo: 'gustavo.jpg'},
-    { name: 'Vinicius ',  photo: '#'},
-    { name: 'Wilson',  photo: 'Wilson.jpg'},
+    { name: 'João Pedro', contact: '(81) 9880-1195', photo: 'Jotta.jpg'},
+    { name: 'Gustavo Andrew', contact: '(81) 8210-4778', photo: 'gustavo.jpg'},
+    { name: 'Vinicius Souza ', contact: '(81) 9435-6528',  photo: 'vinicius.jpg'},
+    { name: 'Wilson Francisco',  contact: '(81) 8843-0765', photo: 'Wilson.jpg'},
     
   ];
 }
