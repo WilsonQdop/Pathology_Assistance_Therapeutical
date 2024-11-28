@@ -20,17 +20,17 @@
   .sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove a margem padrão */
+    margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Garante que a lista ocupe toda a altura disponível */
+    height: 100%; 
   }
   
   .sidebar li {
     width: 204px;
     padding: 25px;
     cursor: pointer;
-    border-bottom: 1px solid #ddd; /* Linha separando os itens */
+    border-bottom: 1px solid #ddd; 
     transition: background-color 0.3s;
   }
   

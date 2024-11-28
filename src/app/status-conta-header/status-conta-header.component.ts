@@ -13,7 +13,7 @@ import { AuthService } from '../auth-service.service';
 export class StatusContaHeaderComponent implements OnInit {
   isUserLogged: boolean = false;
   username: string = '';
-  showMenu: boolean = false;  // Variável de controle para o menu
+  showMenu: boolean = false;  
 
   constructor(private authService: AuthService, private router: Router) {}  // Injeção do Router
 

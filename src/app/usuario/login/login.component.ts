@@ -16,7 +16,7 @@ export class LoginComponent {
   username: string = "";
   password: string = "";
 
-  constructor(private authService: AuthService, private router: Router) {}  // Injete o Router no construtor
+  constructor(private authService: AuthService, private router: Router) {} 
 
   onLogin(event: Event) {
     event.preventDefault();
@@ -28,7 +28,7 @@ export class LoginComponent {
     const user = users.find((u: any) => u.username === username && u.password === password);
   
     if (user) {
-      this.authService.setLoginStatus(true, user.username); // Certifique-se de passar o username correto
+      this.authService.setLoginStatus(true, user.username); 
       this.router.navigate(['/workspace']);
     } else {
       this.authService.setLoginStatus(false);

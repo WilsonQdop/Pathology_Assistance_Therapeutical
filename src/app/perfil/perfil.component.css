@@ -27,7 +27,7 @@ img{
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky; /* Mantém fixo no scroll */
-  top: 20px; /* Distância do topo */
+  top: 20px; 
 }
 
 .dados-adicionais {
@@ -92,7 +92,7 @@ img{
   }
 
   .prancheta {
-    position: relative; /* Deixa móvel em telas pequenas */
+    position: relative; 
     top: 0;
     margin-bottom: 20px;
   }

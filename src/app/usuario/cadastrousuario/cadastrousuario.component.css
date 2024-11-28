@@ -40,25 +40,25 @@ h2 {
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-  gap: 20px; /* Espaço entre colunas */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
   margin-bottom: 20px;
 }
 
 .form-row .full-width {
-  grid-column: span 2; /* Campos de largura total ocupam duas colunas */
+  grid-column: span 2; 
 }
 
 .input-group {
   display: flex;
-  flex-direction: column; /* Empilha labels e inputs verticalmente */
+  flex-direction: column; 
 }
 
 .labels {
   display: flex;
-  justify-content: space-between; /* Espaço entre o label e o span */
-  align-items: center; /* Alinha verticalmente */
-  margin-bottom: 5px; /* Espaço entre a linha de labels e o input */
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 5px; 
 }
 
 label {
@@ -69,7 +69,7 @@ label {
 .error-message {
   color: red;
   font-size: 0.9em;
-  white-space: nowrap; /* Evita quebra de linha no texto do erro */
+  white-space: nowrap; 
 }
 
 input {
@@ -101,20 +101,20 @@ button:hover {
 }
 
 #dob{
-  width: 400px; /* Ajuste o tamanho conforme necessário */
+  width: 400px;
 }
 
-/* Centralizar o ícone de sucesso e a mensagem de confirmação */
+
 .success-icon,
 .confirmation-message {
-  position: fixed; /* Fixar o elemento na tela */
-  top: 50%; /* Posicionar no meio da tela */
-  left: 50%; /* Posicionar no meio da tela */
-  transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   text-align: center;
-  z-index: 9999; /* Garante que o ícone fique acima de outros elementos */
-  opacity: 0; /* Inicialmente invisível */
-  visibility: hidden; /* Não será visível até a animação */
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden; 
 }
 
 

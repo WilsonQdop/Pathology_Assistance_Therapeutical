@@ -7,41 +7,41 @@ header {
   width: 100%;
 }
 
-/* Estilos para o nav */
+
 nav {
-  display: flex; /* Usando flexbox para layout */
-  justify-content: space-between; /* Espaço entre a logo e os links */
-  align-items: center; /* Alinhamento vertical */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
 }
 
-/* Estilos para a logo e nome da marca */
+
 .logo {
-  display: flex; /* Permite alinhar a imagem e o texto em linha */
-  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  display: flex; 
+  align-items: center; 
 }
 
 .logo img {
-  width: 6%; /* Largura da imagem da logo */
-  height: auto; /* Mantém a proporção da imagem */
-  margin-right: 10px; /* Espaçamento à direita da imagem */
+  width: 6%; 
+  height: auto;
+  margin-right: 10px;
 }
 
 .brand {
   height: 6.5dvh;
   display: flex;
-  flex-direction: column; /* Organiza o nome e descrição em coluna */
+  flex-direction: column; 
 }
 
 .brand-name {
-  font-size: 1.3em; /* Tamanho do texto do nome da marca */
-  font-weight: bold; /* Negrito para destacar o nome */
-  color: rgb(255, 255, 255); /* Cor do texto */
-  text-decoration: none; /* Remove o sublinhado do link */
+  font-size: 1.3em; 
+  font-weight: bold; 
+  color: rgb(255, 255, 255); 
+  text-decoration: none; 
   padding-top: 1dvh;
 }
 
 .brand-description {
-  font-size: 0.8em; /* Tamanho da descrição */
-  color: white; /* Cor cinza para a descrição */
+  font-size: 0.8em; 
+  color: white; 
 }
 

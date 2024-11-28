@@ -190,6 +190,7 @@
     width: auto;
     margin-top: 10px;
   }
+
   
   .abas-container button.ativa {
     background: white;
@@ -202,6 +203,7 @@
     color: black;
     transform: translateY(-2px);
   }
+ 
 
   .menuEsquerdo{
     display: flex;

@@ -23,7 +23,7 @@
 
 .lista-content {
   position: fixed;
-  top: 70px; /* Ajuste conforme a altura do cabeçalho */
+  top: 70px;
   right: 20px;
   width: 29.5%;
   max-width: 30%;
@@ -62,9 +62,9 @@
   padding: 15px;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Define a largura fixa */
-    height: auto; /* Define a altura fixa */
-    overflow-y: auto; /* Adiciona barra de rolagem para o conteúdo interno */
+    width: 100%; 
+    height: auto;
+    overflow-y: auto; 
 }
 
 .table {
@@ -165,16 +165,16 @@
     font-size: 16px;
   }
   .lista-content {
-    width: 90%; /* Ajusta a largura para telas menores */
-    left: 5%; /* Centraliza na tela */
+    width: 90%; 
+    left: 5%; 
   }
 }
 
 .btn-success{
-  background-color: #265468; /* Cor ao passar o mouse */
-  border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
+  background-color: #265468; 
+  border-color: #5f8f9c; 
 }
 .btn-success:hover{
-  background-color: #5f8f9c; /* Cor ao passar o mouse */
-  border-color: #5f8f9c; /* Cor da borda ao passar o mouse */
+  background-color: #5f8f9c;
+  border-color: #5f8f9c; 
 }

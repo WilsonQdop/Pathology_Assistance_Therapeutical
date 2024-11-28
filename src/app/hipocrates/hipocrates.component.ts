@@ -9,31 +9,30 @@ import { AuthService } from '../auth-service.service';
   standalone: true,
   templateUrl: './hipocrates.component.html',
   styleUrls: ['./hipocrates.component.css'],
-  imports: [FormsModule, CommonModule, MatIconModule] // Adiciona os módulos necessários
+  imports: [FormsModule, CommonModule, MatIconModule] 
 })
 export class HipocratesComponent {
   isUserLogged: boolean = false;
 
   showHipocrates: boolean = false;
-  mensagem: string = ''; // Mensagem de texto
-  audioUrl: string | null = null; // URL do áudio gravado
-  private mediaRecorder: MediaRecorder | null = null; // Recorder para áudio
-  private audioChunks: Blob[] = []; // Armazena os pedaços de áudio gravados
-  gravando: boolean = false; // Controle de gravação
-  minimizado: boolean = false; // Controle de minimização da caixa de chat
+  mensagem: string = '';
+  audioUrl: string | null = null;
+  private mediaRecorder: MediaRecorder | null = null; 
+  private audioChunks: Blob[] = []; 
+  gravando: boolean = false; 
+  minimizado: boolean = false; 
 
-  // Array de mensagens de texto ou áudio
+ 
   mensagens: { texto?: string; audioUrl?: string }[] = [];
 
-  // Função para enviar uma mensagem de texto
   enviarMensagem() {
     if (this.mensagem) {
       this.mensagens.push({ texto: this.mensagem });
-      this.mensagem = ''; // Limpa a entrada após enviar a mensagem
+      this.mensagem = ''; 
     }
   }
 
-  // Função para iniciar a gravação de áudio
+  
   async iniciarGravacao() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -57,7 +56,7 @@ export class HipocratesComponent {
     }
   }
 
-  // Função para parar a gravação
+
   pararGravacao() {
     if (this.mediaRecorder) {
       this.mediaRecorder.stop();
@@ -65,7 +64,7 @@ export class HipocratesComponent {
     }
   }
 
-  // Função para minimizar ou expandir a área de mensagens
+ 
   minimizar() {
     this.minimizado = !this.minimizado;
   }

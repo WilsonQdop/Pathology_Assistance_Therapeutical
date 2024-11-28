@@ -7,10 +7,10 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 300px; /* Largura inicial */
-  max-width: 90%; /* Largura máxima para telas menores */
-  transition: all 0.3s ease; /* Transição suave ao minimizar/maximizar */
-  overflow: hidden; /* Garante que o conteúdo desapareça ao minimizar */
+  width: 300px;
+  max-width: 90%;
+  transition: all 0.3s ease; 
+  overflow: hidden; 
 }
 
 
@@ -31,15 +31,15 @@
 }
 
 .messages {
-  max-height: 200px; /* Limita a altura da área de mensagens */
+  max-height: 200px; 
   overflow-y: auto;
   transition: max-height 0.3s ease-in-out;
 }
 
 .hidden {
-  max-height: 0; /* Usar max-height para transição suave */
-  padding: 0; /* Remove o padding para minimizar */
-  opacity: 0; /* Gradativamente oculta o conteúdo */
+  max-height: 0;
+  padding: 0; 
+  opacity: 0; 
   transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 

@@ -14,7 +14,7 @@ export class TabelaComponent {
 
   employeeForm: FormGroup;
   ordemAtual = 1;
-  formVisible = true; // Variável que controla a visibilidade do formulário
+  formVisible = true; 
 
   constructor() {
     this.employeeForm = new FormGroup({
@@ -31,16 +31,16 @@ export class TabelaComponent {
   }
 
   toggleForm() {
-    this.formVisible = !this.formVisible; // Alterna a visibilidade do formulário
+    this.formVisible = !this.formVisible; 
   }
 
   onSave() {
-    console.log('Formulário salvo:', this.employeeForm.value); // Log dos dados do formulário
+    console.log('Formulário salvo:', this.employeeForm.value);
     if (this.employeeForm.valid) {
       const pacienteData = this.employeeForm.value; // Obtém os dados do formulário
-      this.pacienteCadastrado.emit(pacienteData); // Emite os dados do paciente
+      this.pacienteCadastrado.emit(pacienteData); 
       this.ordemAtual++;
-      this.employeeForm.reset(); // Reseta o formulário após o envio
+      this.employeeForm.reset();
     } else {
       console.error('Formulário inválido!', this.employeeForm.errors);
     }

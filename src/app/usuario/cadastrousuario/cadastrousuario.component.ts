@@ -91,7 +91,7 @@ export class CadastrousuarioComponent {
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
   
-    // Exibe a animação de sucesso
+  
     this.showSuccessAnimation();
   
     // Redireciona para a página de login após 2 segundos (tempo da animação)
@@ -102,7 +102,7 @@ export class CadastrousuarioComponent {
   
 
   showSuccessAnimation() {
-    // Exibir a animação de sucesso
+   
     const confirmationMessage = document.getElementById('confirmation-message') as HTMLElement;
 
     // Tornar o ícone e a mensagem visíveis com animações
