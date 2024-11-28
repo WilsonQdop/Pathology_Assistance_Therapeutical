@@ -62,10 +62,29 @@
     background-color: rgb(0, 0, 0, 0);
 }
 
-.mais{
-    height: 30px;
-    width: auto;
-    cursor: pointer;
+.fotoDados{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 30px; 
+  align-items: center; 
+  margin-top: 20px;
+  background-color: rgb(222, 226, 230,0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px; 
+}
+.return {
+  position: absolute;
+  top: 10px;
+  left: -2px; 
+  margin-left: 8px;
+  z-index: 1000;
+}
+.mais, .voltar{
+  height: 30px;
+  width: auto;
+  cursor: pointer;
 }
 
 #fotoPerfil{
@@ -75,15 +94,6 @@
     margin-left: 1dvw;
 }
 
-.fotoDados{
-    display: flex;
-    flex-direction: row;
-    gap: 30px; 
-    align-items: center; 
-    margin-top: 20px;
-    background-color: rgb(222, 226, 230,0.2);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
 
 .consultas {
     background-color: #f8f9fa;

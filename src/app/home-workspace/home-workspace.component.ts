@@ -81,6 +81,10 @@ export class HomeWorkspaceComponent {
     this.showPacienteWorkspace = !this.showPacienteWorkspace;
     this.showCards = false;
   }
+  returnCard() {
+    this.showCards = !this.showCards;
+    this.showPacienteWorkspace = false;
+}
 
   selecionarAba(aba: string) {
     this.abaSelecionada = aba;
