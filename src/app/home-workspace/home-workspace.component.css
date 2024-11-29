@@ -321,12 +321,12 @@
     .hipocratesCard{
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
       align-items: center;
       margin: 10px;
       padding: 10px;
-      width: 300px;
-      height: 20vh;
+      width: 20dvw;
+      height: 20.5dvh;
       border-radius: 10px;
       background-color: #f5f5f5;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

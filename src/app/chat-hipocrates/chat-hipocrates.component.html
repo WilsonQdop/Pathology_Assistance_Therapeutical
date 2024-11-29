@@ -1,6 +1,11 @@
 <div class="chat-container">
     <!-- Barra de seleção de chats -->
     <div class="chat-sidebar">
+      
+      <div class="returnHipo">
+        <a (click)="returnHipo()" class="voltarChat"><img class="voltarHipo" src="voltar2.png"></a>
+      </div> 
+        
       <h3>Chats</h3>
       <ul>
         <li
@@ -38,10 +43,7 @@
             </button>
           </div>
         </li>
-      </ul>
-      <div class="returnHipo">
-        <a (click)="returnHipo()" class="voltarChat"><img class="voltarHipo" src="voltar2.png"></a>
-      </div>    
+      </ul> 
       <button class="add-chat-button" (click)="addNewChat()">+ Nova conversa</button>
     </div>
   
