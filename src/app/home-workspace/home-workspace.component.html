@@ -1,30 +1,45 @@
-<div class="cardSuperior">
-    <div *ngIf="showCards" class="cardPaciente">
-        <p class="wellcome">Bem vindo {{usuario}}</p>
-        <div class="proxPaciente">
-            <div class="infoPaciente">
-                <h5>Próximo Paciente</h5>
-                <p><strong>Nome:</strong> {{proxPaciente}}</p>
-                <p><strong>Data:</strong> {{dataProxPaciente}}</p>
-                <div class="posicionador">
-                    <p><strong>Hora:</strong> {{horaProxPaciente}}</p>
-                    <a (click)="showPaciente()" class="expandir"><img class="mais" src="mais.png"></a>
+<div *ngIf="showCards" class="mainContainer">
+    <!-- Primeiro Container -->
+    <div class="leftContainer">
+        <div class="cardSuperior">
+            <div *ngIf="showCards" class="cardPaciente">
+                <p class="wellcome">Bem vindo {{usuario}}</p>
+                <div class="proxPaciente">
+                    <div class="infoPaciente">
+                        <h5>Próximo Paciente</h5>
+                        <p><strong>Nome:</strong> {{proxPaciente}}</p>
+                        <p><strong>Data:</strong> {{dataProxPaciente}}</p>
+                        <div class="posicionador">
+                            <p><strong>Hora:</strong> {{horaProxPaciente}}</p>
+                            <a (click)="showPaciente()" class="expandir"><img class="mais" src="mais.png"></a>
+                        </div>
+                    </div>
                 </div>
-            </div> 
+            </div>
+            <div *ngIf="showCards" (click)="toggleChat()" class="hipocratesCard">
+                <div class="dadosCard">
+                    <h5 class="titulo">Acesse o Hipócrates</h5>
+                    <img id="imagemCard" src="image-hipocrates.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="cardCentral" *ngIf="showCards">
+            <app-resumo-dia></app-resumo-dia>
         </div>
     </div>
-    <div *ngIf="showCards" (click)="toggleChat()" class="hipocratesCard"> 
-        <div class="dadosCard">
-            <h5 class="titulo">Acesse o Hipócrates</h5>
-            <img id="imagemCard" src="image-hipocrates.png" alt="">
-            
+
+    <!-- Segundo Container -->
+    <div  class="rightContainer">
+        <div class="cardVertical">
+            <h5>Adicione Cards</h5>
+            <p><strong>+</strong></p>
         </div>
     </div>
 </div>
 
-<div class="cardCentral" *ngIf="showCards">
-    <app-resumo-dia></app-resumo-dia>
-</div>
+
+
 
 <!-- Expansão do card ao clicar no botão de expandir -->
 

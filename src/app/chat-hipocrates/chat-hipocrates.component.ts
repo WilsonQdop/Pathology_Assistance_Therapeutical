@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../auth-service.service';
   
 
 @Component({
@@ -20,7 +21,7 @@ export class ChatHipocratesComponent {
   newMessage: string = '';
   hoveredChatIndex: number = -1; // Armazena o índice do chat em hover
 
-  constructor() {
+  constructor(private authService: AuthService) {
     this.addNewChat(); // Adiciona um chat inicial
   }
 
@@ -87,7 +88,7 @@ export class ChatHipocratesComponent {
       }
     }
   }
-  returnHipo() {
-   
+  toggleChat() {
+    this.authService.toggleChatStatus();
   }
 }
