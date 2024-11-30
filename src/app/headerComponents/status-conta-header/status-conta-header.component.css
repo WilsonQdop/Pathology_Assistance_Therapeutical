@@ -1,0 +1,144 @@
+
+.nav-links {
+  list-style-type: none; 
+  display: flex; 
+  gap: 10px;
+  margin: 0;
+  padding: 0; 
+}
+
+.nav-links li {
+  display: inline; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500; 
+  transition: color 0.3s; 
+}
+
+.nav-links a:hover {
+  color: black;
+}
+
+.register-link {
+  background-color: #FFA500; 
+  color: #265468;
+  font-weight: bold;
+  padding: 10px 7px 10px 7px;
+  border-radius: 6px;
+}
+
+.login {
+  font-weight: bold;
+  text-decoration: underline !important;
+  text-decoration-color: white !important;
+  text-underline-offset: 3px;
+  margin: 0 10px 0 10px;
+}
+
+.card {
+  background-color: #265468;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.card-name {
+  font-size: 14px;
+  color: white;
+}
+
+.card:hover {
+  background-color: #FFA500;
+  color: #265468;
+}
+
+.card {
+  cursor: pointer;
+}
+
+/* Estilos para o menu de opções (aparecendo abaixo do card) */
+.menu-options {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%; 
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; 
+}
+
+.menu-options ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-options li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-options li:last-child {
+  border-bottom: none;  
+}
+
+.menu-options li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-options li:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  
+  .card{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 70px;
+  }
+
+  .icon{
+    height: 50px;
+    width: auto;
+    
+  }
+  
+  .card-name{
+    visibility: hidden;
+  }
+
+  .template{
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .menu-options{
+    width: auto;
+    position: absolute sticky;
+
+
+  }
+
+}

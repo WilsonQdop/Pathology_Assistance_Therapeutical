@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from '../../usuario/login/login.component';
+import { LoginComponent } from '../cadastro_login/usuario/login/login.component';
 
 
 

@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../auth-service.service';
+import { AuthService } from '../../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ResumoDiaComponent } from '../workspace/resumo-dia/resumo-dia.component';
-import { ListaVacinasComponent } from '../workspace/lista-vacinas/lista-vacinas.component';
-import { MedicamentosUsoComponent } from '../workspace/medicamentos-uso/medicamentos-uso.component';
-import { HistoricoCirurgiasComponent } from '../workspace/historico-cirurgias/historico-cirurgias.component';
-import { DiagnosticoPrevioComponent } from '../workspace/diagnostico-previo/diagnostico-previo.component';
-import { HistoricoInternacaoComponent } from '../workspace/historico-internacao/historico-internacao.component';
-import { ExamesRealizadosComponent } from '../workspace/exames-realizados/exames-realizados.component';
-import { ExamesPeriodicosComponent } from '../workspace/exames-periodicos/exames-periodicos.component';
-import { AnaliseHipocratesComponent } from '../workspace/analise-hipocrates/analise-hipocrates.component';
+import { ResumoDiaComponent } from '../home-workspace-tabs/resumo-dia/resumo-dia.component';
+import { ListaVacinasComponent } from '../home-workspace-tabs/lista-vacinas/lista-vacinas.component';
+import { MedicamentosUsoComponent } from '../home-workspace-tabs/medicamentos-uso/medicamentos-uso.component';
+import { HistoricoCirurgiasComponent } from '../home-workspace-tabs/historico-cirurgias/historico-cirurgias.component';
+import { DiagnosticoPrevioComponent } from '../home-workspace-tabs/diagnostico-previo/diagnostico-previo.component';
+import { HistoricoInternacaoComponent } from '../home-workspace-tabs/historico-internacao/historico-internacao.component';
+import { ExamesRealizadosComponent } from '../home-workspace-tabs/exames-realizados/exames-realizados.component';
+import { ExamesPeriodicosComponent } from '../home-workspace-tabs/exames-periodicos/exames-periodicos.component';
+import { AnaliseHipocratesComponent } from '../home-workspace-tabs/analise-hipocrates/analise-hipocrates.component';
 
 @Component({
   selector: 'app-home-workspace',
@@ -120,7 +120,7 @@ export class HomeWorkspaceComponent {
 
 
   toggleMedicamentos(){
-    this.showMedicamentos = !this.showMedicamentos;
+    this.showMedicamentos = true;
     this.showInfo = false;
     this.showCirurgias = false;
     this.showVacinas = false;
@@ -131,7 +131,7 @@ export class HomeWorkspaceComponent {
   }
 
   toggleInfo(){
-    this.showInfo = !this.showInfo;
+    this.showInfo = true;
     this.showCirurgias = false;
     this.showMedicamentos = false;
     this.showVacinas = false;
@@ -143,7 +143,7 @@ export class HomeWorkspaceComponent {
   }
 
   toggleCirurgias(){
-    this.showCirurgias = !this.showCirurgias;
+    this.showCirurgias = true;
     this.showInfo = false;
     this.showMedicamentos = false;
     this.showVacinas = false;
@@ -154,7 +154,7 @@ export class HomeWorkspaceComponent {
   }
 
   toggleVacinas(){
-    this.showVacinas = !this.showVacinas;
+    this.showVacinas = true;
     this.showInfo = false;
     this.showMedicamentos = false;
     this.showCirurgias = false;
@@ -165,7 +165,7 @@ export class HomeWorkspaceComponent {
   }
 
   toggleDiagnostico(){
-    this.showDiagnostico = !this.showDiagnostico;
+    this.showDiagnostico = true;
     this.showInfo = false;
     this.showMedicamentos = false;
     this.showCirurgias = false;
@@ -176,7 +176,7 @@ export class HomeWorkspaceComponent {
   }
 
   toggleHistorico(){
-    this.showHistorico = !this.showHistorico;
+    this.showHistorico = true;
     this.showInfo = false;
     this.showMedicamentos = false;
     this.showCirurgias = false;
@@ -189,7 +189,7 @@ export class HomeWorkspaceComponent {
 
 
   toggleExames(){
-    this.showExames = !this.showExames;
+    this.showExames = true;
     this.showInfo = false;
     this.showMedicamentos = false;
     this.showCirurgias = false;
@@ -200,7 +200,7 @@ export class HomeWorkspaceComponent {
   }
 
   toggleExamesLab(){
-    this.showExamesLab = !this.showExamesLab;
+    this.showExamesLab = true;
     this.showInfo = false;
     this.showMedicamentos = false;
     this.showCirurgias = false;

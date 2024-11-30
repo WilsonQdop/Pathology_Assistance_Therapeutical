@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { LoginMessageComponent } from '../../login-message/login-message.component';
-import { HomeWorkspaceComponent } from '../../home-workspace/home-workspace.component';
+import { HomeWorkspaceComponent } from '../../workspace/home-workspace/home-workspace.component';
 import { ChatHipocratesComponent } from '../../chat-hipocrates/chat-hipocrates.component';
 
 
@@ -107,7 +107,7 @@ export class CadastroComponent {
   }
 
   togglePacientes() {
-    this.showPacientes = !this.showPacientes;
+    this.showPacientes = true;
     this.showCadastro = false;
     this.showHomeWorkspace = false;
     this.showDashboard = false;
@@ -117,7 +117,7 @@ export class CadastroComponent {
   }
 
   toggleCadastro() {
-    this.showCadastro = !this.showCadastro;
+    this.showCadastro = true;
     this.showPacientes = false;
     this.showHomeWorkspace = false;
     this.showDashboard = false;
@@ -127,7 +127,7 @@ export class CadastroComponent {
   }
 
   toggleHomeWorkspace() {
-    this.showHomeWorkspace = !this.showHomeWorkspace;
+    this.showHomeWorkspace = true;
     this.showDashboard = false;
     this.showSuporte = false;
     this.showPacientes = false;
@@ -137,7 +137,7 @@ export class CadastroComponent {
   }
 
   toggleDashboard() {
-    this.showDashboard = !this.showDashboard;
+    this.showDashboard = true;
     this.showHomeWorkspace = false;
     this.showSuporte = false;
     this.showPacientes = false;
@@ -147,7 +147,7 @@ export class CadastroComponent {
   }
 
   toggleSuporte() {
-    this.showSuporte = !this.showSuporte;
+    this.showSuporte = true;
     this.showHomeWorkspace = false;
     this.showDashboard = false;
     this.showPacientes = false;

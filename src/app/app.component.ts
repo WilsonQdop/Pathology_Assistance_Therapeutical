@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { provideRouter, RouterOutlet } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './headerComponents/header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HipocratesComponent } from './hipocrates/hipocrates.component';
-import { AuthService } from './auth-service.service';
 
 
 
