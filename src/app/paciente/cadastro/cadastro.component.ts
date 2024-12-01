@@ -103,56 +103,32 @@ export class CadastroComponent {
     }
   }
 
-  togglePacientes() {
-    this.showPacientes = true;
+  toggleSection(section: string) {
+    this.showPacientes = false;
     this.showCadastro = false;
     this.showHomeWorkspace = false;
     this.showDashboard = false;
     this.showSuporte = false;
-    if (this.showPacientes) {
+  
+    switch (section) {
+      case 'Pacientes':
+        this.showPacientes = true;
+        break;
+      case 'Cadastro':
+        this.showCadastro = true;
+        break;
+      case 'HomeWorkspace':
+        this.showHomeWorkspace = true;
+        break;
+      case 'Dashboard':
+        this.showDashboard = true;
+        break;
+      case 'Suporte':
+        this.showSuporte = true;
+        break;
     }
   }
-
-  toggleCadastro() {
-    this.showCadastro = true;
-    this.showPacientes = false;
-    this.showHomeWorkspace = false;
-    this.showDashboard = false;
-    this.showSuporte = false;
-    if (this.showCadastro) {
-    }
-  }
-
-  toggleHomeWorkspace() {
-    this.showHomeWorkspace = true;
-    this.showDashboard = false;
-    this.showSuporte = false;
-    this.showPacientes = false;
-    this.showCadastro = false;
-    if (this.showHomeWorkspace) {
-    }
-  }
-
-  toggleDashboard() {
-    this.showDashboard = true;
-    this.showHomeWorkspace = false;
-    this.showSuporte = false;
-    this.showPacientes = false;
-    this.showCadastro = false;
-    if (this.showDashboard) {
-    }
-  }
-
-  toggleSuporte() {
-    this.showSuporte = true;
-    this.showHomeWorkspace = false;
-    this.showDashboard = false;
-    this.showPacientes = false;
-    this.showCadastro = false;
-    if (this.showSuporte) {
-    }
-  }
-
+  
 
 
 }

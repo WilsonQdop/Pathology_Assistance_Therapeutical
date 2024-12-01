@@ -97,30 +97,14 @@ export class HomeWorkspaceComponent {
 
   selecionarAba(aba: string) {
     this.abaSelecionada = aba;
+    this.toggleSection(aba);
     
-    if (aba === 'Medicamentos em uso contínuo') {
-      this.toggleMedicamentos();
-    }if(this.abaSelecionada === 'Informações detalhadas'){
-      this.toggleInfo();
-    }if(this.abaSelecionada === 'Histórico de cirurgias'){
-      this.toggleCirurgias();
-    }if(this.abaSelecionada === 'Vacinas'){
-      this.toggleVacinas();
-    }if(this.abaSelecionada === 'Diagnósticos prévios'){
-      this.toggleDiagnostico();
-    }if(this.abaSelecionada === 'Histórico de internações'){
-      this.toggleHistorico();
-    }if(this.abaSelecionada === 'Exames realizados'){
-      this.toggleExames();
-    }if(this.abaSelecionada === 'Exames laboratoriais periódicos'){
-      this.toggleExamesLab();
-    }
 
+    
   }
 
-
-  toggleMedicamentos(){
-    this.showMedicamentos = true;
+  toggleSection(section: string) {
+    this.showMedicamentos = false;
     this.showInfo = false;
     this.showCirurgias = false;
     this.showVacinas = false;
@@ -128,7 +112,36 @@ export class HomeWorkspaceComponent {
     this.showHistorico = false;
     this.showExames = false;
     this.showExamesLab = false;
-  }
+  
+    switch (this.abaSelecionada) {
+
+      case 'Medicamentos em uso contínuo':
+        this.showMedicamentos = true;
+        break;
+      case 'Informações detalhadas':
+        this.showInfo = true;
+        break;
+      case 'Histórico de cirurgias':
+        this.showCirurgias = true;
+        break;
+      case 'Vacinas':
+        this.showVacinas = true;
+        break;
+      case 'Diagnósticos prévios':
+        this.showDiagnostico = true;
+        break;
+      case 'Histórico de internações':
+        this.showHistorico = true;
+        break;
+      case 'Exames realizados':
+        this.showExames = true;
+        break;
+      case 'Exames laboratoriais periódicos':
+        this.showExamesLab = true;
+        break
+      }
+    }
+
 
   toggleInfo(){
     this.showInfo = true;

@@ -4,11 +4,13 @@
         <div class="main">
             <aside class="sidebar">
                 <ul>
-                    <li (click)="toggleHomeWorkspace()"> Home Workspace</li>
-                    <li (click)="togglePacientes()">Meus Pacientes</li>           
-                    <li (click)="toggleCadastro()">Cadastrar Pacientes</li>                    
-                    <li class="dashboards" (click)="toggleDashboard()">Dashboards</li>
-                    <li class="suporte" (click)="toggleSuporte()">Suporte</li>
+                    <ul>
+                        <li (click)="toggleSection('HomeWorkspace')"> Home Workspace</li>
+                        <li (click)="toggleSection('Pacientes')">Meus Pacientes</li>
+                        <li (click)="toggleSection('Cadastro')">Cadastrar Pacientes</li>
+                        <li class="dashboards" (click)="toggleSection('Dashboard')">Dashboards</li>
+                        <li class="suporte" (click)="toggleSection('Suporte')">Suporte</li>
+                      </ul>
                 </ul>
             </aside>
             <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
