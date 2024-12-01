@@ -30,6 +30,7 @@
   overflow: auto;
   max-height: calc(100vh - 80px);
   margin-top: 2.5dvh;
+
 }
 
 @media(max-width:768px){

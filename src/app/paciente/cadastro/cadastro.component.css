@@ -1,3 +1,6 @@
+.dashboards, .suporte{
+  visibility: hidden;
+}
 
 .sidebar {
     background-color: white;

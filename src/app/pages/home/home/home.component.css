@@ -208,6 +208,10 @@ h2 {
   }
 }
 
+.atualizacoes, .sobre{
+  visibility: hidden;
+}
+
 #solutions {
   display: grid;
   grid-template-columns: 2fr 1fr;

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { LoginMessageComponent } from '../../login-message/login-message.component';
-import { AuthService } from '../../auth-service.service';
-import { CadastroComponent } from '../../paciente/cadastro/cadastro.component';
+import { LoginMessageComponent } from '../../../login-message/login-message.component';
+import { AuthService } from '../../../auth-service.service';
+import { CadastroComponent } from '../../../paciente/cadastro/cadastro.component';
 
 @Component({
   selector: 'app-workspace-page',

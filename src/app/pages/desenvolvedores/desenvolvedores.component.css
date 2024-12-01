@@ -22,8 +22,8 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
-    width: 250px; 
-    height: 320px; 
+    width: 17dvw; 
+    height: 50dvh; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;

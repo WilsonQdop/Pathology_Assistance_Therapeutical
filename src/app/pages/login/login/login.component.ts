@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';  // Importe o Router
-import { AuthService } from '../../../../auth-service.service';
+import { AuthService } from '../../../auth-service.service';
 import { consumerBeforeComputation } from '@angular/core/primitives/signals';
 
 @Component({

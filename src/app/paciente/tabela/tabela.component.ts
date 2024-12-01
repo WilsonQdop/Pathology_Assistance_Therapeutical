@@ -35,14 +35,13 @@ export class TabelaComponent {
   }
 
   onSave() {
-    console.log('Formulário salvo:', this.employeeForm.value);
     if (this.employeeForm.valid) {
       const pacienteData = this.employeeForm.value; // Obtém os dados do formulário
       this.pacienteCadastrado.emit(pacienteData); 
       this.ordemAtual++;
       this.employeeForm.reset();
     } else {
-      console.error('Formulário inválido!', this.employeeForm.errors);
+      alert('Preencha todos os campos!');
     }
   }
 }

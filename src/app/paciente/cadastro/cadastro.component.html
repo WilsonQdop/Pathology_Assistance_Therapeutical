@@ -1,5 +1,5 @@
 
-<div *ngIf="isUserLogged;else userLogged">
+<div>
     <div *ngIf="!chatOn;else chatMode">
         <div class="main">
             <aside class="sidebar">
@@ -7,8 +7,8 @@
                     <li (click)="toggleHomeWorkspace()"> Home Workspace</li>
                     <li (click)="togglePacientes()">Meus Pacientes</li>           
                     <li (click)="toggleCadastro()">Cadastrar Pacientes</li>                    
-                    <li (click)="toggleDashboard()">Dashboards</li>
-                    <li (click)="toggleSuporte()">Suporte</li>
+                    <li class="dashboards" (click)="toggleDashboard()">Dashboards</li>
+                    <li class="suporte" (click)="toggleSuporte()">Suporte</li>
                 </ul>
             </aside>
             <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
@@ -20,9 +20,4 @@
     <ng-template #chatMode>
         <app-chat-hipocrates></app-chat-hipocrates>
     </ng-template>
-
 </div>
-
-<ng-template #userLogged>
-    <app-login-message></app-login-message>
-</ng-template>

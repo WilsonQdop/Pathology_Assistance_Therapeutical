@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../auth-service.service';
+import { AuthService } from '../../../../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ResumoDiaComponent } from '../home-workspace-tabs/resumo-dia/resumo-dia.component';

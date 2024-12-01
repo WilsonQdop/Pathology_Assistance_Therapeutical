@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth-service.service';
 import { CommonModule } from '@angular/common';
 import { LoginMessageComponent } from '../../login-message/login-message.component';
-import { HomeWorkspaceComponent } from '../../workspace/home-workspace/home-workspace.component';
-import { ChatHipocratesComponent } from '../../chat-hipocrates/chat-hipocrates.component';
+import { HomeWorkspaceComponent } from '../../pages/workspace/workspace-content/home-workspace/home-workspace.component';
+import { ChatHipocratesComponent } from '../../pages/chat-hipocrates/chat-hipocrates.component';
 
 
 
@@ -86,9 +86,6 @@ export class CadastroComponent {
 
   constructor(private authService: AuthService) {}
   ngOnInit() {
-    this.authService.getLoginStatusObservable().subscribe((status: boolean) => {
-      this.isUserLogged = status;
-    });
 
     this.authService.getUsernameObservable().subscribe((username: string | null) => {
       this.username = username || '';

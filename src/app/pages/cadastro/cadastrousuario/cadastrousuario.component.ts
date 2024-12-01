@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; // Importando o Router
-import { ConfirmationMessageComponent } from '../../../../confirmation-message/confirmation-message.component';
+import { ConfirmationMessageComponent } from '../../../confirmation-message/confirmation-message.component';
 
 
 interface User {
