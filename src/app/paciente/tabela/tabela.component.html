@@ -1,10 +1,3 @@
-<!-- Botão para exibir/ocultar o formulário
-<button (click)="toggleForm()" class="btn btn-primary custom-button">
-  {{ formVisible ? 'Ocultar' : 'Mostrar' }} cadastro paciente
-</button> -->
-<!-- Formulário que será mostrado/ocultado -->
-
-
 
 <form *ngIf="formVisible" [formGroup]="employeeForm" (ngSubmit)="onSave()" class="p-3 border rounded" style="max-width: 70dvh; margin-top: 2dvh;">
   <div class="top">
@@ -33,7 +26,10 @@
     <div class="col-6">
       <div class="form-group">
         <label for="celular">Celular</label>
-        <input type="text" formControlName="celular" class="form-control" placeholder="Celular do paciente" required>
+        <input type="text" formControlName="celular" class="form-control" placeholder="Celular do paciente"
+        [value]="employeeForm.get('celular')?.value | telefonePipe"
+        maxlength="15" 
+        required>
       </div>
     </div>
     <div class="col-6">
@@ -45,7 +41,8 @@
     <div class="col-6">
       <div class="form-group">
         <label for="estado">Estado</label>
-        <input type="text" formControlName="estado" class="form-control" placeholder="Estado do Paciente" required>
+        <input type="text" formControlName="estado" class="form-control" placeholder="Estado do Paciente"
+        maxlength="2" required>
       </div>
     </div>
     <div class="col-6">
@@ -57,7 +54,10 @@
     <div class="col-6">
       <div class="form-group">
         <label for="cpf">CPF</label>
-        <input type="text" formControlName="cpf" class="form-control" placeholder="CPF do paciente" required>
+        <input type="text" formControlName="cpf" class="form-control" placeholder="CPF do paciente"
+        [value]="employeeForm.get('cpf')?.value | cpfPipe"
+        maxlength="14"
+        required>
       </div>
     </div>
     <div class="col-12">

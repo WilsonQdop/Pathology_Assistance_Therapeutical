@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  position: relative;
+  position:relative;
 }
 
 .btn-info {
@@ -32,6 +32,19 @@
   margin-top: 2.5dvh;
 
 }
+
+.tituloAcoes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opcoesAcoes{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
 
 @media(max-width:768px){
 

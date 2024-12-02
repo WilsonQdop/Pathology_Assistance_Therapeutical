@@ -1,13 +1,15 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CpfPipePipe } from '../tabela/cpf-pipe.pipe';
+import { TelefonePipePipe } from '../tabela/telefone-pipe.pipe';
 
 @Component({
   selector: 'app-lista',
   standalone: true,
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.scss'],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,CpfPipePipe,TelefonePipePipe],
 })
 export class ListaComponent {
   @Input() employeeList: any[] = []; // Recebe a lista de pacientes
@@ -16,7 +18,8 @@ export class ListaComponent {
   novoPaciente: any = {}; 
   searchTerm: string = ''; 
 
- 
+  
+
   editPaciente(paciente: any) {
     paciente.isEditing = true; 
   }
@@ -41,14 +44,14 @@ export class ListaComponent {
   addPaciente() {
     // Verifica se o novo paciente possui Código PIN e Nome
     if (!this.novoPaciente.codigoPin || !this.novoPaciente.nome) {
-      console.error('Código PIN e Nome são obrigatórios!');
+      alert('Código PIN e Nome são obrigatórios!');
       return; 
     }
 
   
     const codigoPinExistente = this.employeeList.some(p => p.codigoPin === this.novoPaciente.codigoPin);
     if (codigoPinExistente) {
-      console.error('Código PIN já existente!');
+      alert('Código PIN já existente!');
       return; 
     }
 
@@ -77,4 +80,5 @@ export class ListaComponent {
       );
     });
   }
+  
 }

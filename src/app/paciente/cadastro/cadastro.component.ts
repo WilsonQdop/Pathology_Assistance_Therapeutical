@@ -4,7 +4,6 @@ import { TabelaComponent } from "../tabela/tabela.component";
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth-service.service';
 import { CommonModule } from '@angular/common';
-import { LoginMessageComponent } from '../../login-message/login-message.component';
 import { HomeWorkspaceComponent } from '../../pages/workspace/workspace-content/home-workspace/home-workspace.component';
 import { ChatHipocratesComponent } from '../../pages/chat-hipocrates/chat-hipocrates.component';
 
@@ -14,7 +13,7 @@ import { ChatHipocratesComponent } from '../../pages/chat-hipocrates/chat-hipocr
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, LoginMessageComponent, CommonModule,HomeWorkspaceComponent, ChatHipocratesComponent],
+  imports: [ListaComponent,TabelaComponent, FormsModule,CommonModule, CommonModule,HomeWorkspaceComponent, ChatHipocratesComponent],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })

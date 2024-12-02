@@ -24,7 +24,13 @@
                 <th class="text-center">Celular</th>
                 <th class="text-center">Cidade</th>
                 <th class="text-center">Estado</th>
-                <th>Ações</th>
+                <th><div class="tituloAcoes">
+                  <p>Ações</p>
+                  <div class="opcoesAcoes">
+                    <p>Editar</p>
+                    <p>Excluir</p>
+                  </div>
+                </div></th>
               </tr>
             </thead>
             <tbody>
@@ -36,16 +42,18 @@
                   <input *ngIf="item.isEditing" [(ngModel)]="item.nome" class="form-control" />
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{ item.cpf }}</div>
-                  <input *ngIf="item.isEditing" [(ngModel)]="item.cpf" class="form-control" />
+                  <div *ngIf="!item.isEditing">{{ item.cpf | cpfPipe}}</div>
+                  <input  *ngIf="item.isEditing" [(ngModel)]="item.cpf" class="form-control" 
+                  maxlength="11"/>
                 </td>
                 <td>
                   <div *ngIf="!item.isEditing">{{ item.email }}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.email" class="form-control" />
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{item.celular}}</div>
-                  <input *ngIf="item.isEditing" [(ngModel)]="item.celular" class="form-control" />
+                  <div *ngIf="!item.isEditing">{{item.celular |telefonePipe}}</div>
+                  <input *ngIf="item.isEditing" [(ngModel)]="item.celular" class="form-control"
+                  maxlength="11" />
                 </td>
                 <td>
                   <div *ngIf="!item.isEditing">{{item.cidade}}</div>
@@ -57,12 +65,12 @@
                 </td>
                 <td >
                   <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent me-2" aria-label="Editar paciente">
-                    <span class="material-icons icons icons-color1">edit</span>Editar
+                    <span class="material-icons icons icons-color1">edit</span>
                   </button>
                   <button *ngIf="item.isEditing" (click)="saveEdit(item)" class="btn btn-success me-2 text-center" aria-label="Salvar alterações">Salvar</button>
                   <button *ngIf="item.isEditing" (click)="cancelEdit(item)" class="btn btn-secondary me-2 text-center" aria-label="Cancelar edição">Cancelar</button>
                   <button (click)="deletePaciente(item.codigoPin)" class="btn btn-transparent" aria-label="Excluir paciente">
-                    <span class="material-icons icons icons-color2 text-center">delete</span>Excluir
+                    <span class="material-icons icons icons-color2 text-center">delete</span>
                   </button>
                 </td>
               </tr>

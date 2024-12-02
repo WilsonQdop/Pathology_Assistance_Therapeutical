@@ -7,10 +7,11 @@ import { HipocratesComponent } from './hipocrates/hipocrates.component';
 
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, HeaderComponent, FooterComponent, FormsModule, HipocratesComponent],
+  imports: [RouterOutlet, ReactiveFormsModule, HeaderComponent, FooterComponent, FormsModule, HipocratesComponent,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -1,13 +1,15 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TelefonePipePipe } from './telefone-pipe.pipe';
+import { CpfPipePipe } from './cpf-pipe.pipe';
 
 @Component({
   selector: 'app-tabela',
   standalone: true,
   templateUrl: './tabela.component.html',
   styleUrls: ['./tabela.component.scss'],
-  imports: [ReactiveFormsModule, CommonModule]
+  imports: [ReactiveFormsModule, CommonModule, TelefonePipePipe, CpfPipePipe]
 })
 export class TabelaComponent {
   @Output() pacienteCadastrado = new EventEmitter<any>(); // Emissor de evento
