@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
-import { AuthService } from '../auth-service.service';
+import { AuthService } from '../../auth-service.service';
 
 @Component({
   selector: 'app-hipocrates',

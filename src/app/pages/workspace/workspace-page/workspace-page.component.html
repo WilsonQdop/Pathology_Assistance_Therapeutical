@@ -1,7 +1,28 @@
 
 <div *ngIf="isUserLogged;else userLogged">
-        <app-cadastro></app-cadastro>
- </div>
+    <div *ngIf="!chatOn;else chatMode">
+        <div class="main">
+            <aside class="sidebar">
+                <ul>
+                    <ul>
+                        <li (click)="toggleSection('HomeWorkspace')"> Home Workspace</li>
+                        <li (click)="toggleSection('Pacientes')">Meus Pacientes</li>
+                        <li (click)="toggleSection('Cadastro')">Cadastrar Pacientes</li>
+                        <li class="dashboards" (click)="toggleSection('Dashboard')">Dashboards</li>
+                        <li class="suporte" (click)="toggleSection('Suporte')">Suporte</li>
+                      </ul>
+                </ul>
+            </aside>
+            <app-home-workspace *ngIf="showHomeWorkspace"></app-home-workspace>
+            <app-tabela *ngIf="showCadastro" (pacienteCadastrado)="onPacienteCadastrado($event)"></app-tabela>
+            <app-lista class="lista" *ngIf="showPacientes" [employeeList]="employeeList" (employeeListChange)="employeeList = $event"></app-lista>
+        </div>
+    </div>
+    
+    <ng-template #chatMode>
+        <app-chat-hipocrates></app-chat-hipocrates>
+    </ng-template>
+</div>
     
     <ng-template #userLogged>
         <app-login-message></app-login-message>
