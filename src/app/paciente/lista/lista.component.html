@@ -61,7 +61,8 @@
                 </td>
                 <td>
                   <div *ngIf="!item.isEditing">{{ item.estado }}</div>
-                  <input *ngIf="item.isEditing" [(ngModel)]="item.estado" class="form-control" />
+                  <input *ngIf="item.isEditing" [(ngModel)]="item.estado" class="form-control" 
+                  maxlength="2"/>
                 </td>
                 <td >
                   <button *ngIf="!item.isEditing" (click)="editPaciente(item)" class="btn btn-transparent me-2" aria-label="Editar paciente">
