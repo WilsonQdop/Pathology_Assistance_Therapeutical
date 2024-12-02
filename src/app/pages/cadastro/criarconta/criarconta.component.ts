@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HipocratesComponent } from '../../hipocrates/hipocrates.component';
-import { CadastrousuarioComponent } from '../../usuario/cadastrousuario/cadastrousuario.component';
+import { HipocratesComponent } from '../../../utilitarios/hipocrates/hipocrates.component';
+import { CadastrousuarioComponent } from '../cadastrousuario/cadastrousuario.component';
 
 
 @Component({

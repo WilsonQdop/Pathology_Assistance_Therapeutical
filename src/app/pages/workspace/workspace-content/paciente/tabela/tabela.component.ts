@@ -12,7 +12,7 @@ import { CpfPipePipe } from './cpf-pipe.pipe';
   imports: [ReactiveFormsModule, CommonModule, TelefonePipePipe, CpfPipePipe]
 })
 export class TabelaComponent {
-  @Output() pacienteCadastrado = new EventEmitter<any>(); // Emissor de evento
+  @Output() pacienteCadastrado = new EventEmitter<any>();
 
   employeeForm: FormGroup;
   ordemAtual = 1;
@@ -38,7 +38,7 @@ export class TabelaComponent {
 
   onSave() {
     if (this.employeeForm.valid) {
-      const pacienteData = this.employeeForm.value; // Obtém os dados do formulário
+      const pacienteData = this.employeeForm.value;
       this.pacienteCadastrado.emit(pacienteData); 
       this.ordemAtual++;
       this.employeeForm.reset();
