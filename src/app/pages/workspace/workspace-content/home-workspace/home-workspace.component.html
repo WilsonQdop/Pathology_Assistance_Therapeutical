@@ -11,7 +11,9 @@
                         <p><strong>Data:</strong> {{dataProxPaciente}}</p>
                         <div class="posicionador">
                             <p><strong>Hora:</strong> {{horaProxPaciente}}</p>
-                            <a (click)="showPaciente()" class="expandir"><img class="mais" src="mais.png"></a>
+                            <section (click)="showPaciente()" class="expandir">
+                                <p class="more-info"><strong>+INFO</strong></p>
+                            </section>
                         </div>
                     </div>
                 </div>
