@@ -24,15 +24,16 @@
   color: white;
   font-size: 1.9rem;
   transition: color 0.3s;
-  padding: 1% 30%;
+  padding: 2% 30%;
   border-radius: 0.5cap;
+  font-family: Blippo, fantasy;
 }
 
 .navbar ul li a:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.384);
   backdrop-filter: blur(8px);
-  padding: 1% 30%;
+  padding: 2% 30%;
   border-radius: 0.5cap;
 }
 

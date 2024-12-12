@@ -15,8 +15,8 @@ export class DesenvolvedoresComponent {
     
     { name: 'João Pedro', contact: '(81) 99880-1195', photo: 'Jotta.jpg', email:"joao80615@gmail.com", linkGithub: "https://github.com/Jotta2k4" ,github:"Jotta2k4", linkLinkedin: "https://www.linkedin.com/in/joao-carneiro-silva", linkedin: "joao-carneiro-silva"},
 
-    { name: 'Vinicius Souza ', contact: '(81) 99435-6528',  photo: 'vinicius.jpg', email: "jota@email.com", linkGithub: "https://github.com/vinigenes" , github: "vinigenes", linkLinkedin: "https://www.linkedin.com/in/vinicius-souza-361779262/", linkedin: "vinicius-souza"},
+    { name: 'Vinicius Souza ', contact: '(81) 99435-6528',  photo: 'vinicius.jpg', email: "vinibr300@gmail.com", linkGithub: "https://github.com/vinigenes" , github: "vinigenes", linkLinkedin: "https://www.linkedin.com/in/vinicius-souza-361779262/", linkedin: "vinicius-souza"},
 
-    { name: 'Wilson Francisco',  contact: '(81) 98843-0765', photo: 'Wilson.jpg', email: "jota@email.com", linkGithub: "https://github.com/WilsonQdop" , github: "WilsonQdop", linkLinkedin: "https://www.linkedin.com/in/wilson-ads/", linkedin: "wilson-ads"},
+    { name: 'Wilson Francisco',  contact: '(81) 98843-0765', photo: 'Wilson.jpg', email: "wilson.qdop@gmail.com", linkGithub: "https://github.com/WilsonQdop" , github: "WilsonQdop", linkLinkedin: "https://www.linkedin.com/in/wilson-ads/", linkedin: "wilson-ads"},
   ];
 }
