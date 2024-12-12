@@ -42,25 +42,25 @@
                   <input *ngIf="item.isEditing" [(ngModel)]="item.nome" class="form-control" />
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{ item.cpf | cpfPipe}}</div>
+                  <div class="item-center" *ngIf="!item.isEditing">{{ item.cpf | cpfPipe}}</div>
                   <input  *ngIf="item.isEditing" [(ngModel)]="item.cpf" class="form-control" 
                   maxlength="11"/>
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{ item.email }}</div>
+                  <div class="item-center" *ngIf="!item.isEditing">{{ item.email }}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.email" class="form-control" />
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{item.celular |telefonePipe}}</div>
+                  <div class="item-center" *ngIf="!item.isEditing">{{item.celular |telefonePipe}}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.celular" class="form-control"
                   maxlength="11" />
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{item.cidade}}</div>
+                  <div class="item-center" *ngIf="!item.isEditing">{{item.cidade}}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.cidade" class="form-control" />
                 </td>
                 <td>
-                  <div *ngIf="!item.isEditing">{{ item.estado }}</div>
+                  <div class="item-center" *ngIf="!item.isEditing">{{ item.estado }}</div>
                   <input *ngIf="item.isEditing" [(ngModel)]="item.estado" class="form-control" 
                   maxlength="2"/>
                 </td>

@@ -125,10 +125,22 @@
   color: gray !important;
   cursor: pointer;
   padding: 0;
+  margin-left: 2dvw !important;
 }
 
 .btn-transparent:hover {
   color: #265468 !important;
+  background-color: #c0c0c0;
+  border-radius: 1.5cap;
+}
+
+.material-icons{
+  padding: 0.1dvh 0.5dvw;
+  border-radius: 0.5cap;
+}
+
+.material-icons:hover{
+  background-color: #d4d4d4;
 }
 
 .icon {
@@ -189,4 +201,9 @@
 .btn-success:hover{
   background-color: #5f8f9c;
   border-color: #5f8f9c; 
+}
+
+.item-center {
+  display: flex;
+  justify-content: space-around;
 }
